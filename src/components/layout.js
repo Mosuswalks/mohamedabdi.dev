@@ -7,12 +7,12 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { Layout } from "antd"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const PageLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,8 +23,12 @@ const Layout = ({ children }) => {
     }
   `)
 
+const { Header, Footer, Sider, Content } = Layout;
+
   return (
-    <>
+    <PageLayout>
+      {/* <Sider>Sider</Sider> */}
+    <Layout>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -33,19 +37,20 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
-        <footer>
+        <Content>{children}</Content>
+        <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        </Footer>
       </div>
-    </>
+      </Layout>
+    </PageLayout>
   )
 }
 
-Layout.propTypes = {
+PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default PageLayout
