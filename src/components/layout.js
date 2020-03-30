@@ -31,7 +31,13 @@ const { Header, Footer, Sider, Content } = Layout;
   return (
     <div>
       <Layout>
-        <Sider>
+        <Sider 
+          style={{
+          overflow: 'auto',
+          height: '100vh',
+          position: 'fixed',
+          left: 0,
+        }}>
           <Menu theme='dark' mode='inline'>
             <Menu.Item key="1">
             <UserOutlined />
@@ -39,10 +45,13 @@ const { Header, Footer, Sider, Content } = Layout;
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout>
+        <Layout className="site-layout" style={{ marginLeft: 200 }}>
           
-          <Content>{children}</Content>
-          <Footer>Footer</Footer>
+        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+			{children}
+		</Content>
+
+        <Footer>Footer</Footer>
         </Layout>
       </Layout>
     </div>
