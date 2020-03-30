@@ -7,45 +7,45 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Layout } from "antd"
+import { Layout, Menu } from "antd"
 import { useStaticQuery, graphql } from "gatsby"
+
+import {
+  AppstoreOutlined,
+  BarChartOutlined,
+  CloudOutlined,
+  ShopOutlined,
+  TeamOutlined,
+  UserOutlined,
+  UploadOutlined,
+  VideoCameraOutlined,
+} from '@ant-design/icons';
 
 import "./layout.css"
 
 const PageLayout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  
 
 const { Header, Footer, Sider, Content } = Layout;
 
   return (
-    <PageLayout>
-      {/* <Sider>Sider</Sider> */}
-    <Layout>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <Content>{children}</Content>
-        <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </Footer>
-      </div>
+    <div>
+      <Layout>
+        <Sider>
+          <Menu theme='dark' mode='inline'>
+            <Menu.Item key="1">
+            <UserOutlined />
+            <span className="nav-text">nav 1</span>
+            </Menu.Item>
+          </Menu>
+        </Sider>
+        <Layout>
+          
+          <Content>{children}</Content>
+          <Footer>Footer</Footer>
+        </Layout>
       </Layout>
-    </PageLayout>
+    </div>
   )
 }
 
