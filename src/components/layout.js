@@ -7,59 +7,67 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Layout, Menu } from "antd"
 import { useStaticQuery, graphql } from "gatsby"
-
-import {
-  AppstoreOutlined,
-  BarChartOutlined,
-  CloudOutlined,
-  ShopOutlined,
-  TeamOutlined,
-  UserOutlined,
-  UploadOutlined,
-  VideoCameraOutlined,
-} from '@ant-design/icons';
-
+import Header from '../components/Header'
 import "./layout.css"
 
-const PageLayout = ({ children }) => {
+const Layout = ({ children, color, darkMode, textColor }) => {
   
 
-const { Header, Footer, Sider, Content } = Layout;
-
+const layoutStyle = {
+	backgroundColor: color,
+    margin: 'auto',
+    marginTop: 0,
+    marginBottom: 0,
+}
   return (
-    <div>
-      <Layout>
-        <Sider 
-          style={{
-          overflow: 'auto',
-          height: '100vh',
-          position: 'fixed',
-          left: 0,
-        }}>
-          <Menu theme='dark' mode='inline'>
-            <Menu.Item key="1">
-            <UserOutlined />
-            <span className="nav-text">nav 1</span>
-            </Menu.Item>
-          </Menu>
-        </Sider>
-        <Layout className="site-layout" style={{ marginLeft: 200 }}>
-          
-        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-			{children}
-		</Content>
+    <div style={layoutStyle}>
+      <Header />
 
-        <Footer>Footer</Footer>
-        </Layout>
-      </Layout>
+
+      <style jsx global>{`
+          body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+          }
+          a {
+            font-family: 'Quicksand', sans-serif;
+          }
+          .container {
+            z-index: 10;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+          }
+          .content {
+            display: flex;
+            justiy-content: center;
+          }
+          
+        @media (min-width: 85.375em) and (max-width: 119em) {
+          .container {
+            width: 980px;
+          }
+        }
+          @media (min-width: 120em) {
+            .container {
+              width: 1180px;
+            }
+          }
+          @media (min-width: 160em) {
+            .container {
+              width: 1380px;
+            }
+          }
+        `}
+        </style>
     </div>
   )
 }
 
-PageLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// PageLayout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// }
 
-export default PageLayout
+export default Layout
