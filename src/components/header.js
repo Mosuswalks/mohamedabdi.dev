@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import SideModal  from './sidemodal'
+import SideModal  from './SideModal'
 import { Col, Row } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { Link } from 'gatsby'
