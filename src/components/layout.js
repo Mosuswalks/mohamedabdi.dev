@@ -1,7 +1,7 @@
 
 import React from "react"
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from './header'
+import Footer from './footer'
 
 const Layout = ({ children, color, darkMode, textColor }) => {
 
@@ -13,6 +13,7 @@ const layoutStyle = {
 }
 	return (
 		<div style={layoutStyle}>
+			
 			<Header color={color} darkMode={darkMode} textColor={textColor}/>
 
 			{children}

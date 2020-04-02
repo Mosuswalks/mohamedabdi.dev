@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import SideModal  from './SideModal'
+import SideModal  from './sidemodal'
 import { Col, Row } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { Link } from 'gatsby'
 import Image from './Image'
 import { theme } from '../../config'
 
-import Avatar from '../images/avatar.svg'
 
 
 const Header = ( { color, darkMode, textColor }) => {

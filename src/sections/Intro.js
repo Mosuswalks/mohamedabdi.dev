@@ -1,6 +1,5 @@
 import React from 'react'
 import { Col, Row } from 'antd'
-import Image from '../components/Image'
 import Laptop from '../images/laptop.svg'
 
 
