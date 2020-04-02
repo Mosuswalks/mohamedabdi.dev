@@ -2,10 +2,10 @@ import React from 'react'
 import { theme } from '../../config'
 import { CloseOutlined } from '@ant-design/icons'
 
-const SideModal = ({ children, onClose, showModal, color}) => {
+const SideModal = ({ children, onClose, showModal, color }) => {
 
     return(
-        <div className={'wd-side-modal' + (showModal ? ' wd-side-modal-show' : ' wd-side-modal-hide')}>
+        <div className={'wd-side-modal ' + (showModal ? ' wd-side-modal-show' : ' wd-side-modal-hide')}>
             <div className='header'>
                 <div />
                 <div className='close' onClick={onClose}><CloseOutlined /></div>

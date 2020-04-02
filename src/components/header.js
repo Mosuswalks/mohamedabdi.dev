@@ -4,9 +4,10 @@ import SideModal  from './SideModal'
 import { Col, Row } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { Link } from 'gatsby'
-import Image from '../components/image'
+import Image from './Image'
 import { theme } from '../../config'
 
+import Avatar from '../images/avatar.svg'
 
 
 const Header = ( { color, darkMode, textColor }) => {
@@ -23,7 +24,8 @@ const Header = ( { color, darkMode, textColor }) => {
 				<Col xs={12} lg={2}>
 					<Link to='/'>
 						<div>
-							<Image imgName={'avatar.png'} className='avatar'/>
+							{/* <Avatar className='avatar' /> */}
+							<Image imgName={'avatar.png'} className='avatar' />
 						</div>
 					</Link>
 				</Col>
@@ -46,19 +48,19 @@ const Header = ( { color, darkMode, textColor }) => {
 							<div className='desktopMenu'>Contact</div>
 						</AnchorLink>
 					</div>
-
+					
 					<div className='hamburgerIcon' 
 						 onClick={() => setShowMenu(true)}>
 							<MenuOutlined />
 					</div>
 				</Col>
 			</Row>
-
+	
 			<SideModal
 				showModal={showMenu}
 				onClose={handleClick}
 				color={theme.color}
-				darkMode={theme.darkMode}
+				darkMode={darkMode}
 			>
 				<div className='mobileMenu'>
 					<AnchorLink href='/about-me'>
@@ -196,32 +198,32 @@ const Header = ( { color, darkMode, textColor }) => {
 				opacity: 0.6;
 				}
 				a {
-				text-decoration: none;
-				color: white;
-				font-size: 11pt;
-				}
-				a:hover {
-				opacity: 0.6;
-				}
+					text-decoration: none;
+					color: white;
+					font-size: 11pt;
+					}
+						a:hover {
+						opacity: 0.6;
+					}
 				button {
-				color: white;
-				background-color: ${theme.color.primary};
-				border: 0px solid transparent;
-				font-size: 11.5pt;
-				letter-spacing: 0.5pt;
-				padding: 10px 18px;
-				cursor: pointer;
+					color: white;
+					background-color: ${theme.color.primary};
+					border: 0px solid transparent;
+					font-size: 11.5pt;
+					letter-spacing: 0.5pt;
+					padding: 10px 18px;
+					cursor: pointer;
 				}
 				button:hover {
-				opacity: 0.8;
+					opacity: 0.8;
 				}
 				@media (max-width: 720px) {
-				.menu {
-					display: none;
-				}
-				.hamburgerIcon {
-					display: block;
-				}
+					.menu {
+						display: none;
+					}
+					.hamburgerIcon {
+						display: block;
+					}
 				}
 			`}
 		</style>

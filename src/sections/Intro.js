@@ -1,6 +1,8 @@
 import React from 'react'
 import { Col, Row } from 'antd'
-import Image from '../components/image'
+import Image from '../components/Image'
+import Laptop from '../images/laptop.svg'
+
 
 const Intro = () => {
     return(
@@ -20,7 +22,17 @@ const Intro = () => {
                         </div>
 
                         <div className='position-text deselect'>Full Stack Developer</div>
-
+                        <div className='me-text deselect'>
+                            I design and code for
+                            <br />
+                            <span className='flex-row'>
+                                Website
+                            </span>
+                            <br />
+                            <span className='flex-row'>
+                                Mobile
+                            </span>
+                        </div>
                    
                         <Col lg={10} sm={8} xs={15}>
                             <div className='resume-btn' onClick={() => window.open('/file/resume.pdf', '_blank')}>
@@ -30,8 +42,9 @@ const Intro = () => {
                     </div>
                 </Col>
                 <Col lg={12} sm={0} xs={0}>
-                    <div>
-                        <Image imgName={'laptop.png'}/>
+                    <div >
+                        {/* <Image className='main-image' imgName={'laptop.png'}/> */}
+                        <Laptop className='main-image'/>
                     </div>
                 </Col>
            

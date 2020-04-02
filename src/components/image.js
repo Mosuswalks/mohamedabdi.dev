@@ -14,7 +14,7 @@ import Img from "gatsby-image"
  */
 
 
-const Image = ({ imgName }) => (
+const Image = ({ imgName, className }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -37,7 +37,7 @@ const Image = ({ imgName }) => (
       if (!image) {
         return null
       }
-      return <Img fluid={image.node.fluid} />
+      return <Img className={className} fluid={image.node.fluid} />
     }}
   />
 )
