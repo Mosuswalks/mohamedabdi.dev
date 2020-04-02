@@ -76,6 +76,7 @@ section {
 }
 .text-box {
     margin-top: '7%';
+    /* padding-top: 15%; */
 }
 .row-width {
     width: 1180px;
@@ -151,10 +152,10 @@ section {
         font-size: 12.5pt;
     }
     .hello-text {
-        font-size: 30pt;
+        font-size: 25pt;
     }
     .name-text {
-        font-size: 30pt;
+        font-size: 26pt;
     }
     .position-text {
         font-size: 20pt;

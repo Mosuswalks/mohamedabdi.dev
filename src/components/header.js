@@ -81,6 +81,9 @@ const Header = ( { color, darkMode, textColor }) => {
 		</div>
 
 		<style jsx>{`
+				.ant-row {
+					position: relative;
+				}
 				.hamburgerIcon {
 				color: ${theme.color.primary};
 				margin-top: 7%;
