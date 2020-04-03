@@ -3,6 +3,7 @@ import { Row, Col } from 'antd'
 import Layout  from "../components/layout"
 import Intro from '../sections/Intro'
 import About from '../sections/About'
+import Experience from '../sections/Experience'
 import { theme } from '../../config'
 
 import SEO from "../components/seo"
@@ -23,8 +24,10 @@ const IndexPage = () => {
 			<section className='main-container'>
 				<Intro />
 			</section>
-			<section className='box-container' id='about-me'> 
+			{/* <hr style={{width: 650, color: '#5adbff', marginTop: 100}}/> */}
+			<section className='main-container' id='about-me'> 
 				<Row className='row-width'>
+					<Col lg={{ span: 18, offset: 3}}>
 					<About>
 						<div className='describe-me'>
 						Hello! I'm Mohamed, a Software Developer who<span style={{ color: theme.color.secondary }}> recently just graduated from George Brown College</span> with 
@@ -41,9 +44,11 @@ const IndexPage = () => {
 						<br />
 						</div>
 					</About>
+					</Col>
 				</Row>
 			</section>
-
+			<Experience />
+			
 
 
 

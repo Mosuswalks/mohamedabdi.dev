@@ -1,26 +1,30 @@
 import React from 'react'
 import { Col, Row } from 'antd'
+import Typed from 'react-typed'
+import { DownloadOutlined } from '@ant-design/icons'
 import Laptop from '../images/laptop.svg'
 
 
 const Intro = () => {
+
+    let option = {
+        strings: ['Hello!']
+    }
+
     return(
         <Row className='body-width'>
             <div className='long-line' />
                 <Col lg={12} md={24} sm={24} xs={24}>
                     <div className='text-box'>
 
-                        <div className='hello-text deselect'>
-                            Hello, I'm
-                        </div>
+                        {/* <Typed strings={["<span class='hello-text deselect'>Hello, I'm </span>"]} typeSpeed={70}/> */}
+                        
+                        <Typed className={'hello-text'}strings={[`Hello, I'm <br /> <span class='name-text name-bracer-left deselect'>{</span><h1 class='name-text deselect'>Mohamed Abdi</h1><span class='name-text name-bracer-right deselect'>}</span><br /><span class='position-text deselect'>Full Stack Developer</span>`]} typeSpeed={60}/>
+                        {/* <div className=''>
+                            <Typed strings={[`^1300 <span class='name-text deselect name-bracer-left'>{</span><h1 class='name-text deselect'>Mohamed Abdi</h1> <span class='name-text name-bracer-right'>} </span>`]} typeSpeed={70}/>
+                        </div> */}
 
-                        <div className='name-text deselect'>
-                            <span className='name-bracer-left'>{'{'}</span>
-                                <h1 className='name-text deselect'>Mohamed Abdi</h1>
-                            <span className='name-bracer-right'>{'}'}</span>
-                        </div>
-
-                        <div className='position-text deselect'>Full Stack Developer</div>
+                        {/* <Typed strings={[`^2300 <span class='position-text deselect typed'>Full Stack Developer</span>`]} typeSpeed={70} /> */}
                         {/* <div className='me-text deselect'>
                             I design and code for
                             <br />
@@ -62,6 +66,9 @@ const Intro = () => {
                 }
             `}
             </style>
+            <script>
+                {}
+            </script>
         </Row>
     )
 }

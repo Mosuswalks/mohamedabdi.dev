@@ -18,7 +18,7 @@ const Header = ( { color, darkMode, textColor }) => {
 
   return(
 	<div className='header'>
-		<div className='container'>
+		<div className='container' style={{position: 'fixed'}}>
 			<Row>
 				<Col xs={12} lg={2}>
 					<Link to='/'>
@@ -57,7 +57,7 @@ const Header = ( { color, darkMode, textColor }) => {
 			<SideModal
 				showModal={showMenu}
 				onClose={handleClick}
-				color={theme.color}
+				color={color}
 				darkMode={darkMode}
 			>
 				<div className='mobileMenu'>
@@ -147,7 +147,7 @@ const Header = ( { color, darkMode, textColor }) => {
 				z-index: 100;
 				top: 0px;
 				left: 0px;
-				background-color: rgba(0,0,0,0.7);
+				background-color: ${theme.color.primary};
 				}
 				.mobileMenu {
 				width: 88%;
@@ -160,7 +160,7 @@ const Header = ( { color, darkMode, textColor }) => {
 				padding: 15px;
 				}
 				.mobileMenuLink {
-				font-size: 15pt;
+				font-size: 3em;
 				text-align: center;
 				font-weight: bold;
 				padding: 10px 15px;
@@ -185,6 +185,7 @@ const Header = ( { color, darkMode, textColor }) => {
 				flex: 1;
 				align-items: center;
 				justify-content: center;
+				
 				}
 				.logo {
 				color: white;

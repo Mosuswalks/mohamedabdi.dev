@@ -53,14 +53,15 @@ section {
     position: absolute;
     z-index: 0;
     background: #45B29A;
-    opacity: 0.7;
+    opacity: 0.9;
     -webkit-transform: rotate(42deg);
     -webkit-transform-origin: 31% 0%;
 }
 .box-container {
     z-index: 0;
     padding-top: 5%;
-    margin: 0% 17% 5% 17%;
+    padding-left: 10%;
+    margin: 0% 30% 5% 17%;
     min-height: 45vw;
 }
 .contact-container {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'antd'
+import { Col, Row, Divider } from 'antd'
 
 import { theme } from '../../config'
 
@@ -23,15 +23,18 @@ const About = ({ children }) => {
 
     return(
         <div className='intro-text section-container'>
-            <span style={{ color: theme.color.secondary }}>01.</span> About Me
+            <Divider orientation='left' 
+                     style={{color: theme.color.secondary, fontSize: '2rem'}}>
+                        <span style={{ color: theme.color.secondary }}>01.</span> About Me
+            </Divider>
             {children}
             <Row className='stack-text'>
-                <Col lg={9} xs={14}>
+                <Col lg={12} xs={14}>
                 <ul className='stack-text'>
-                    {skills.back.map(skill => <li>{skill}</li>)}
+                    {skills.front.map(skill => <li>{skill}</li>)}
                 </ul>
                 </Col>
-                <Col lg={9} xs={10}>
+                <Col lg={12} xs={10}>
                 <ul className='stack-text'>
                     {skills.back.map(skill => <li>{skill}</li>)}
                 </ul>
