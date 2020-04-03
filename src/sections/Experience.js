@@ -7,6 +7,11 @@ const Experience = () => {
 
     return(
         <section className='main-container' id='experience'> 
+            <div className=''>
+            <Divider orientation='left' className='intro-text' 
+                     style={{ fontSize: '2rem'}}>
+                        <span style={{ color: theme.color.secondary }}>01.</span> About Me
+                </Divider>
 				<Row className='row-width'>
 					<Col lg={{ span: 12, offset: 6 }} md={24} xs={24}>
 						<div className='intro-text work-container'>
@@ -23,6 +28,7 @@ const Experience = () => {
 						</div>
 					</Col>
 				</Row>
+                </div>
       		</section>
     )
 }
