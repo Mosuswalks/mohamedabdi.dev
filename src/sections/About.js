@@ -3,7 +3,7 @@ import { Col, Row, Divider } from 'antd'
 import NodeJS  from '../images/NodeJS.svg'
 import MongoDB from '../images/MongoDB.svg'
 import Gatsby from '../images/GatsbyLogo.svg'
-import GraphQL from '../images/GraphQL.svg'
+import GraphQL from '../images/graphQL.svg'
 import { theme } from '../../config'
 
 
