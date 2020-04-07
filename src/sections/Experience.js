@@ -6,11 +6,12 @@ const Experience = () => {
 
 
     return(
-        <section className='main-container' id='experience'> 
-            <div className=''>
-            <Divider orientation='left' className='intro-text' 
+        <section className='main-container' id='experience'>
+            
+            <div className='container'>
+                <Divider orientation='left'
                      style={{ fontSize: '2rem'}}>
-                        <span style={{ color: theme.color.secondary }}>01.</span> About Me
+                        <span style={{ color: theme.color.secondary }}>02.</span> <span className='intro-text intro-text'>Experience</span>
                 </Divider>
 				<Row className='row-width'>
 					<Col lg={{ span: 12, offset: 6 }} md={24} xs={24}>
@@ -22,14 +23,12 @@ const Experience = () => {
 						<div style={{ fontWeight: 'normal', fontSize: '18px' }}>
 							July 2019 - Dec 2019
 						</div>
-						{/* <ul className='witty-list'>
-							{renderMap(witty)}
-						</ul> */}
+						
 						</div>
 					</Col>
 				</Row>
-                </div>
-      		</section>
+            </div>
+      	</section>
     )
 }
 

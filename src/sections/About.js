@@ -1,6 +1,5 @@
 import React from 'react'
 import { Col, Row, Divider } from 'antd'
-import NodeJS  from '../images/NodeJS.svg'
 import MongoDB from '../images/MongoDB.svg'
 import Gatsby from '../images/GatsbyLogo.svg'
 import GraphQL from '../images/graphQL.svg'
@@ -10,13 +9,12 @@ import { theme } from '../../config'
 const skills = {
     front: [
         
-        
         <Gatsby className='logo' />
     ],
     back: [
-      <MongoDB className='logo' />,
+        <MongoDB className='logo' />,
      
-      <GraphQL className='logo graphql' />
+        <GraphQL className='logo graphql' />
     ]
   }
 
@@ -37,7 +35,6 @@ const About = ({ children }) => {
                 </Col>
                 <Col lg={12} xs={10}>
                 <ul className='stack-text'>
-                  
                     {skills.back.map(skill => <li>{skill}</li>)}
                 </ul>
                 </Col>

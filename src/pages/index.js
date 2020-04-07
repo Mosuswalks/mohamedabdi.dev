@@ -4,11 +4,13 @@ import Layout  from "../components/layout"
 import Intro from '../sections/Intro'
 import About from '../sections/About'
 import Experience from '../sections/Experience'
+import Projects from '../sections/Projects'
 import { theme } from '../../config'
 
 import SEO from "../components/seo"
 
 import './global.css'
+
 
 
 const IndexPage = () => {
@@ -18,13 +20,13 @@ const IndexPage = () => {
 		darkMode: true
 	})
 
+
 	return (
 		<Layout color={state.color} darkMode={state.darkMode} textColor={state.textColor}>
 			<SEO title="Home" />
 			<section className='main-container'>
 				<Intro />
 			</section>
-			{/* <hr style={{width: 650, color: '#5adbff', marginTop: 100}}/> */}
 			<section className='main-container' id='about-me'> 
 				<Row className='row-width'>
 					<Col lg={{ span: 18, offset: 3}}>
@@ -40,7 +42,7 @@ const IndexPage = () => {
 						and at the same time grow them. Currently based in Toronto, Ontario but
 						i'm willing to move to other parts of the world for work.
 						<br /> <br />
-						Here are a list of technologies that i've worked with:
+						Here are some of technologies that i've worked with:
 						<br />
 						</div>
 					</About>
@@ -48,7 +50,9 @@ const IndexPage = () => {
 				</Row>
 			</section>
 			<Experience />
-			
+			<Projects />
+			<Projects />
+			<Projects />
 			
 
 

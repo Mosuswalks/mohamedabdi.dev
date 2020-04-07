@@ -11,7 +11,7 @@ const Intro = () => {
         <Row className='body-width'>
             <div className='long-line' />
                 <Col lg={12} md={24} sm={24} xs={24}>
-                    <div className='text-box'>
+                    <div className='text-box intro-text-box'>
 
                         <Typed className={'hello-text'}strings={[`Hello, I'm <br /> <span class='name-text name-bracer-left deselect'>{</span><h1 class='name-text deselect'>Mohamed Abdi</h1><span class='name-text name-bracer-right deselect'>}</span><br /><span class='position-text deselect'>Full Stack Developer</span>`]} typeSpeed={60}/>
                         
@@ -22,7 +22,7 @@ const Intro = () => {
                         </Col>
                     </div>
                 </Col>
-                <Col lg={12} md={12} sm={0} xs={0}>
+                <Col lg={12} md={0} sm={0} xs={0}>
                     <div >
                         <Laptop className='main-image'/>
                     </div>
@@ -33,6 +33,10 @@ const Intro = () => {
                 margin: 0;
                 display: inline-block;
                 }
+                .intro-text-box {
+                    padding-top: 17%;
+                    padding-left: %;
+                }
                 .name-bracer-left {
                     color: #fff;
                     margin-right: 7px;
@@ -41,6 +45,7 @@ const Intro = () => {
                     margin-left: 8px;
                     color: #fff;
                 }
+                
             `}
             </style>
             <script>
