@@ -22,7 +22,7 @@ const Experience = () => {
                   Apple Canada
                 </div>
                 <div style={{ fontWeight: "normal", fontSize: "18px" }}>
-                  July 2019 - Dec 2019
+                  July 2019 - Present
                 </div>
               </div>
             </Card>
@@ -39,6 +39,9 @@ const Experience = () => {
                   July 2019 - Dec 2019
                 </div>
               </div>
+              <br />
+              <br />
+              <br />
             </Card>
           </Col>
           <Col lg={{ span: 8 }} md={24} xs={24}>

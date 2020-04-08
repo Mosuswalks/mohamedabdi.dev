@@ -18,7 +18,7 @@ const PageLayout = ({ children, color, darkMode, textColor }) => {
         <Menu color={color} textColor={textColor} />
       </Header>
       <Content>{children}</Content>
-      <Footer color={color} textColor={textColor} />
+      <Footer color={color} />
 
       <style jsx global>
         {`
