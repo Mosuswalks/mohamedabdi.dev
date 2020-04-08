@@ -2,6 +2,13 @@ section {
     display: flex;
     justify-content: center;
 }
+
+.ant-Header{
+    width: 80%;
+    margin:auto;
+    
+}
+
 .name {
     color: brown;
 }
@@ -53,9 +60,9 @@ section {
     position: absolute;
     z-index: 0;
     background: #45B29A;
-    opacity: 0.9;
+    opacity: 0.7;
     -webkit-transform: rotate(42deg);
-    -webkit-transform-origin: 31% 0%;
+    -webkit-transform-origin: 21% 0%;
 }
 .box-container {
     z-index: 0;

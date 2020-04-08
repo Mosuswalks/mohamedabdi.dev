@@ -1,8 +1,11 @@
 import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
+import { Layout } from "antd"
+import Menu from "./Menu"
+// import Footer from "./Footer"
 
-const Layout = ({ children, color, darkMode, textColor }) => {
+const { Header, Content, Footer } = Layout
+
+const PageLayout = ({ children, color, darkMode, textColor }) => {
   const layoutStyle = {
     backgroundColor: color,
     margin: "auto",
@@ -10,11 +13,11 @@ const Layout = ({ children, color, darkMode, textColor }) => {
     marginBottom: 0,
   }
   return (
-    <div style={layoutStyle}>
-      <Header color={color} darkMode={darkMode} textColor={textColor} />
-
-      {children}
-
+    <Layout style={{ backgroundColor: `${color}` }}>
+      <Header style={{ backgroundColor: `${color}` }}>
+        <Menu color={color} textColor={textColor} />
+      </Header>
+      <Content>{children}</Content>
       <Footer color={color} textColor={textColor} />
 
       <style jsx global>
@@ -37,6 +40,13 @@ const Layout = ({ children, color, darkMode, textColor }) => {
             display: flex;
             justiy-content: center;
           }
+          .ant-layout {
+            backgroundcolor: ${color};
+          }
+
+          .ant-header {
+            backgroundcolor: ${color};
+          }
 
           @media (min-width: 85.375em) and (max-width: 119em) {
             .container {
@@ -55,8 +65,8 @@ const Layout = ({ children, color, darkMode, textColor }) => {
           }
         `}
       </style>
-    </div>
+    </Layout>
   )
 }
 
-export default Layout
+export default PageLayout

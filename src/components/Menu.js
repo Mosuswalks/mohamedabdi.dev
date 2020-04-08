@@ -5,9 +5,10 @@ import { Col, Row } from "antd"
 import { MenuOutlined } from "@ant-design/icons"
 import { Link } from "gatsby"
 import Image from "./Image"
+
 import { theme } from "../../config"
 
-const Header = ({ color, darkMode, textColor }) => {
+const Menu = ({ color, darkMode, textColor }) => {
   const [showMenu, setShowMenu] = useState(false)
 
   const handleClick = () => {
@@ -15,81 +16,76 @@ const Header = ({ color, darkMode, textColor }) => {
   }
 
   return (
-    <div className="header">
-      <div className="container" style={{ position: "fixed" }}>
-        <Row>
-          <Col xs={12} lg={2}>
-            <Link to="/">
-              <div>
-                <Image imgName={"avatar.png"} className="avatar" />
-              </div>
-            </Link>
-          </Col>
-
-          <Col xs={12} lg={22}>
-            <div className="menu">
-              <AnchorLink href="/about-me">
-                <div className="desktopMenu">About</div>
-              </AnchorLink>
-
-              <AnchorLink href="/experience">
-                <div className="desktopMenu">Experience</div>
-              </AnchorLink>
-
-              <AnchorLink href="/projects">
-                <div className="desktopMenu">Projects</div>
-              </AnchorLink>
-
-              <AnchorLink href="/contact">
-                <div className="desktopMenu">Contact</div>
-              </AnchorLink>
+    <div>
+      <Row>
+        <Col xs={12} lg={{ span: 2, offset: 3 }}>
+          <Link to="/">
+            <div>
+              <Image imgName={"avatar.png"} className="avatar" />
             </div>
+          </Link>
+        </Col>
 
-            <div className="hamburgerIcon" onClick={() => setShowMenu(true)}>
-              <MenuOutlined />
-            </div>
-          </Col>
-        </Row>
-
-        <SideModal
-          showModal={showMenu}
-          onClose={handleClick}
-          color={color}
-          darkMode={darkMode}
-        >
-          <div className="mobileMenu">
+        <Col xs={12} lg={{ offset: 14, span: 2 }}>
+          <div className="menu">
             <AnchorLink href="/about-me">
-              <div className="mobileMenulink" onClick={() => handleClick}>
-                About
-              </div>
+              <div className="desktopMenu">About</div>
             </AnchorLink>
 
             <AnchorLink href="/experience">
-              <div className="mobileMenulink" onClick={() => handleClick}>
-                Experience
-              </div>
+              <div className="desktopMenu">Experience</div>
             </AnchorLink>
 
             <AnchorLink href="/projects">
-              <div className="mobileMenulink" onClick={() => handleClick}>
-                Projects
-              </div>
+              <div className="desktopMenu">Projects</div>
             </AnchorLink>
 
             <AnchorLink href="/contact">
-              <div className="mobileMenulink" onClick={() => handleClick}>
-                Contact
-              </div>
+              <div className="desktopMenu">Contact</div>
             </AnchorLink>
           </div>
-        </SideModal>
-      </div>
+
+          <div className="hamburgerIcon" onClick={() => setShowMenu(true)}>
+            <MenuOutlined />
+          </div>
+        </Col>
+      </Row>
+
+      <SideModal
+        showModal={showMenu}
+        onClose={handleClick}
+        color={color}
+        darkMode={darkMode}
+      >
+        <div className="mobileMenu">
+          <AnchorLink href="/about-me">
+            <div className="mobileMenulink" onClick={() => handleClick}>
+              About
+            </div>
+          </AnchorLink>
+
+          <AnchorLink href="/experience">
+            <div className="mobileMenulink" onClick={() => handleClick}>
+              Experience
+            </div>
+          </AnchorLink>
+
+          <AnchorLink href="/projects">
+            <div className="mobileMenulink" onClick={() => handleClick}>
+              Projects
+            </div>
+          </AnchorLink>
+
+          <AnchorLink href="/contact">
+            <div className="mobileMenulink" onClick={() => handleClick}>
+              Contact
+            </div>
+          </AnchorLink>
+        </div>
+      </SideModal>
 
       <style jsx>
         {`
-          .ant-row {
-            position: relative;
-          }
           .hamburgerIcon {
             color: ${theme.color.primary};
             margin-top: 7%;
@@ -99,7 +95,6 @@ const Header = ({ color, darkMode, textColor }) => {
             float: right;
           }
           .avatar {
-            width: 78px;
             z-index: 10;
           }
           .avatar:hover {
@@ -186,9 +181,6 @@ const Header = ({ color, darkMode, textColor }) => {
           }
           .header {
             background-color: ${color};
-            height: 100px;
-            display: flex;
-            flex: 1;
             align-items: center;
             justify-content: center;
           }
@@ -238,4 +230,4 @@ const Header = ({ color, darkMode, textColor }) => {
   )
 }
 
-export default Header
+export default Menu
