@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react"
 
-function Footer ({ textColor, color }) {
+function Footer({ textColor, color }) {
   return (
     <div>
-      <div className='copyright'>
-        <div className='container'>
-            Copyright © <span style={{ textDecorationLine: 'underline', marginBottom: 2 }}>Mohamed Abdi</span> (2020)
+      <div className="copyright">
+        <div className="container">
+          Copyright ©{" "}
+          <span style={{ textDecorationLine: "underline", marginBottom: 2 }}>
+            Mohamed Abdi
+          </span>{" "}
+          (2020)
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx>
+        {`
           .underline {
             border-bottom-width: 2;
             border-color: #000;

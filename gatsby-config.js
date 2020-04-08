@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Mohamed Abdi`,
+    description: `Mohamed Abdi's Portfolio Page.`,
+    author: `@mosuswalks`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,19 +24,19 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/avatar.png`, // This path is relative to the root of the site.
       },
-      
     },
-    'gatsby-plugin-antd',
+    "gatsby-plugin-antd",
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/
-        }
-      }
-    }
+          include: /images/,
+        },
+      },
+    },
+    `gatsby-plugin-styled-jsx`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
