@@ -34,15 +34,16 @@ section {
     padding: 20px;
     background-color: #45B29A;
     transition: ease-out; 
+    border-style: none;
 }
-.btn-width {
+/* .btn-width {
     width: 36%;
-}
-.resume-btn:hover {
+} */
+/* .resume-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 0 10px #4990FE22, 0 0 5px #4990FE22;
-}
+} */
 .deselect {
     -webkit-user-select: none;
     -moz-user-select: none;

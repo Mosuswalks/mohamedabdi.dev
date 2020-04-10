@@ -18,24 +18,17 @@ const Intro = () => {
             ]}
             typeSpeed={60}
           />
-
-          <div
-            className="resume-btn"
-            onClick={() => window.open("../pages/file/resume.pdf", "_blank")}
-          >
-            <span style={{ color: "#fff" }}>
-              <DownloadOutlined style={{ fontSize: "1.5em" }} /> Download Résumé
-            </span>
+          <div>
+            <Button
+              className="resume-btn"
+              size="large"
+              shape="round"
+              href={Resume}
+            >
+              <DownloadOutlined style={{ fontSize: "1.5em" }} />
+              Download Résumé
+            </Button>
           </div>
-          <Button
-            className="resume-btn"
-            size="large"
-            shape="round"
-            href={Resume}
-          >
-            <DownloadOutlined style={{ fontSize: "1.5em" }} />
-            Download Résumé
-          </Button>
         </div>
       </Col>
       <Col lg={12} md={0} sm={0} xs={0}>
