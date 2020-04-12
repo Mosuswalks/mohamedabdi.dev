@@ -19,12 +19,7 @@ const Intro = () => {
             typeSpeed={60}
           />
           <div>
-            <Button
-              className="resume-btn"
-              size="large"
-              shape="round"
-              href={Resume}
-            >
+            <Button className="resume-btn" shape="round" href={Resume}>
               <DownloadOutlined style={{ fontSize: "1.5em" }} />
               Download Résumé
             </Button>

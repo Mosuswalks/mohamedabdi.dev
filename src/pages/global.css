@@ -26,14 +26,14 @@ section {
 }
 .resume-btn {
     width: 14em;
-    border-radius: 50px;
     text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
     font-weight: bold;
     font-size: 13.5pt;
-    margin-top: 35px;
-    padding: 20px;
+    justify-content: center;
     background-color: #45B29A;
-    transition: ease-out; 
     border-style: none;
 }
 /* .btn-width {
