@@ -2,6 +2,7 @@ import React from "react"
 import { Divider, Row, Col, Card } from "antd"
 import { GithubOutlined, DesktopOutlined } from "@ant-design/icons"
 import Image from "../components/Image"
+import Snkrs from "../images/snkrs.svg"
 
 import { theme } from "../../config"
 
@@ -10,34 +11,45 @@ const Projects = ({ children, project }) => {
     <div className="project-section">
       <Row style={{ width: "100%" }}>
         <Col lg={16} md={14} sm={24} xs={24}>
-          <Card>
+          {project.img === "covid-frame.png" ? (
             <Image imgName={project.img} className="project-img" />
-          </Card>
+          ) : (
+            <Snkrs
+              className="project-img"
+              style={{ width: "200px", height: "200px" }}
+            />
+          )}
         </Col>
         <Col lg={8} md={10} sm={24} xs={24}>
           <div className="project-container">
             {project.name}
             <div className="project-madeAt">
-              {project.personal ? "" : "Made At "}
+              {project.personal ? null : "Made At "}
               <span className="company">{project.madeAt}</span>
             </div>
             <div className="project-description">{children}</div>
             <div className="project-tool">
-              test
               {project.tools.map((txt, idx) => {
                 return <div key={idx}>{txt}</div>
               })}
             </div>
             <div className="project-link">
-              <GithubOutlined
-                onClick={() => window.open(project.link, "_blank")}
-              />
-              {/* <img
-                src={project.github ? "img/github.svg" : "/img/link.svg"}
-                className="link-svg"
-                alt={project.github ? "/img/github.svg" : "/img/link.svg"}
-                onClick={() => window.open(project.link, "_blank")}
-              /> */}
+              {project.liveSite ? (
+                <a
+                  href={project.siteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icons"
+                >
+                  <DesktopOutlined />
+                </a>
+              ) : null}
+              <a href={project.link}>
+                <GithubOutlined
+                  className="icons"
+                  onClick={() => window.open(project.link, "_blank")}
+                />
+              </a>
             </div>
           </div>
         </Col>
@@ -67,6 +79,11 @@ const Projects = ({ children, project }) => {
             background-color: rgb(23, 42, 69);
             box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
           }
+
+          .icons {
+            padding: 20%;
+          }
+
           .link-svg {
             width: 22px;
           }
