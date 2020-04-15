@@ -5,7 +5,9 @@ import Intro from "../sections/Intro"
 import About from "../sections/About"
 import Experience from "../sections/Experience"
 import Projects from "../sections/Projects"
+
 import { theme } from "../../config"
+import { project } from "../constants"
 
 import SEO from "../components/seo"
 
@@ -55,8 +57,28 @@ const IndexPage = () => {
           </About>
         </Col>
       </Row>
-
-      <Projects />
+      <section className="box-container" id="projects">
+        <Row>
+          <div className="intro-text">
+            <Projects project={project.covidWatch}>
+              Covid-Watch is an e-commerce platform that promote{" "}
+              <span style={{ color: theme.color.secondary }}>
+                "healthier shopping habits"
+              </span>{" "}
+              for consumer by providing a carefully curated merchants and
+              products on the platform.
+            </Projects>
+            <Projects project={project.snkrBot}>
+              Covid-Watch is an e-commerce platform that promote{" "}
+              <span style={{ color: theme.color.secondary }}>
+                "healthier shopping habits"
+              </span>{" "}
+              for consumer by providing a carefully curated merchants and
+              products on the platform.
+            </Projects>
+          </div>
+        </Row>
+      </section>
 
       <style jsx>
         {`

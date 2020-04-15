@@ -51,8 +51,6 @@ const Experience = () => {
             </Card>
           </Col>
         </Row>
-
-        <style jsx>{``}</style>
       </div>
     </section>
   )
