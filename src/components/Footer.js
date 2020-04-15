@@ -2,7 +2,7 @@ import React from "react"
 
 function Footer({ textColor, color }) {
   return (
-    <div>
+    <div className="container">
       <div className="copyright">
         <div className="container">
           Copyright ©{" "}

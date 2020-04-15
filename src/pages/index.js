@@ -56,7 +56,6 @@ const IndexPage = () => {
         </Col>
       </Row>
 
-      <Experience />
       <Projects />
 
       <style jsx>

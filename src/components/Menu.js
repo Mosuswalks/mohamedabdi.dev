@@ -32,10 +32,6 @@ const Menu = ({ color, darkMode, textColor }) => {
               <div className="desktopMenu">About</div>
             </AnchorLink>
 
-            <AnchorLink href="/experience">
-              <div className="desktopMenu">Experience</div>
-            </AnchorLink>
-
             <AnchorLink href="/projects">
               <div className="desktopMenu">Projects</div>
             </AnchorLink>
@@ -61,12 +57,6 @@ const Menu = ({ color, darkMode, textColor }) => {
           <AnchorLink href="/about-me">
             <div className="mobileMenulink" onClick={() => handleClick}>
               About
-            </div>
-          </AnchorLink>
-
-          <AnchorLink href="/experience">
-            <div className="mobileMenulink" onClick={() => handleClick}>
-              Experience
             </div>
           </AnchorLink>
 
