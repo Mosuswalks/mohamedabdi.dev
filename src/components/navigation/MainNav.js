@@ -22,15 +22,19 @@ const MainNav = () => {
         <Col xs={{ offset: 2 }} lg={{ offset: 3 }}>
           <Avatar className={styles.avatar} />
         </Col>
-        <Col lg={{ offset: 11 }} xs={0}>
+        <Col lg={{ offset: 11 }} sm={0} xs={0}>
           <Menu mode="horizontal">
             <Menu.Item>About</Menu.Item>
             <Menu.Item>Projects</Menu.Item>
             <Menu.Item>Contact</Menu.Item>
           </Menu>
         </Col>
-        <Col lg={0} med={0} sm={{ offset: 6 }} xs={{ offset: 14 }}>
-          <Button shape="circle" size="large" onClick={openMobileMenu}>
+        <Col lg={0} med={0} sm={{ offset: 6 }} xs={{ offset: 15 }}>
+          <Button
+            size="large"
+            onClick={openMobileMenu}
+            className={styles.hambuger}
+          >
             <MenuOutlined />
           </Button>
         </Col>
@@ -42,7 +46,6 @@ const MainNav = () => {
                 <CloseOutlined onClick={openMobileMenu} />
               </Col>
             </Row>
-
             <Menu.Item>About</Menu.Item>
             <Menu.Item>Projects</Menu.Item>
             <Menu.Item>Contact</Menu.Item>
