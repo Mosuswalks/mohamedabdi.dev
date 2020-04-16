@@ -23,7 +23,7 @@ const Intro = () => {
             />
           </div>
         </Col>
-        <Col lg={{ span: 8 }}>
+        <Col lg={{ span: 9 }}>
           <Coding className={styles.coding} />
         </Col>
       </Row>

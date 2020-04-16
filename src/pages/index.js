@@ -10,6 +10,7 @@ const IndexPage = () => {
     <PageLayout>
       <SEO title="Home" />
       <Intro />
+      <About />
     </PageLayout>
   )
 }

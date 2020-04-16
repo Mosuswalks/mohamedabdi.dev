@@ -10,7 +10,7 @@ const MainNav = () => {
   return (
     <div>
       <Row>
-        <Col xs={2} lg={{ offset: 4 }}>
+        <Col xs={2} lg={{ offset: 3 }}>
           <Avatar className={styles.avatar} />
         </Col>
         <Col lg={{ offset: 11 }}>
