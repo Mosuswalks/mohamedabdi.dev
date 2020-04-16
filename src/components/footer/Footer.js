@@ -1,11 +1,12 @@
 import React from "react"
 
-const SideModal = () => {
+function Footer() {
   return (
-    <div>
+    <div className="container">
+      test
       <style jsx>{``}</style>
     </div>
   )
 }
 
-export default SideModal
+export default Footer
