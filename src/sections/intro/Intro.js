@@ -12,7 +12,7 @@ const Intro = () => {
   return (
     <section className={styles.container}>
       <Row>
-        <Col lg={{ offset: 3, span: 10 }}>
+        <Col lg={{ offset: 3, span: 10 }} xs={{ offset: 3, span: 6 }}>
           <div className={styles.typedBox}>
             <Typed
               className={styles.introText}
@@ -23,7 +23,7 @@ const Intro = () => {
             />
           </div>
         </Col>
-        <Col lg={{ span: 9 }}>
+        <Col lg={{ span: 9 }} xs={0}>
           <Coding className={styles.coding} />
         </Col>
       </Row>

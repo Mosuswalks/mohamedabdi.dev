@@ -24,42 +24,18 @@ const About = ({ children }) => {
       <div className={styles.about}>
         <Row>
           <Col lg={{ offset: 3, span: 6 }}>
-            <Title level={1} className={styles.title}>
-              About
-            </Title>
-            <Paragraph>This is the Paragraph</Paragraph>
+            <Card>
+              <Title level={1} className={styles.title}>
+                About
+              </Title>
+              <Paragraph>This is the Paragraph</Paragraph>
+            </Card>
           </Col>
+
           <Col lg={{ offset: 2, span: 10 }}>
-            <Row gutter={16}>
-              <Col lg={8}>
-                <div className={styles.techLogos}>
-                  <JavaScript />
-                </div>
-              </Col>
-              <Col lg={8}>
-                <div className={styles.techLogos}>
-                  <NodeJS />
-                </div>
-              </Col>
-              <Col lg={8}>
-                <div className={styles.techLogos}>
-                  <TypeScript />
-                </div>
-              </Col>
-            </Row>
-            <Row gutter={16}>
-              <Col lg={8}>
-                <div className={styles.techLogos}>{/* <Graphql /> */}</div>
-              </Col>
-              <Col lg={8}>
-                <div className={styles.techLogos}>{/* <MongoDB /> */}</div>
-              </Col>
-              <Col lg={8}>
-                <div className={styles.techLogos}>
-                  <Apollo />
-                </div>
-              </Col>
-            </Row>
+            <Row gutter={16}></Row>
+
+            <Row gutter={16} className={styles.logoRows}></Row>
           </Col>
         </Row>
       </div>
