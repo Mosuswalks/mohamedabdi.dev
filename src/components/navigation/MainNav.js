@@ -20,27 +20,20 @@ const MainNav = () => {
   return (
     <div id="page-wrap">
       <Row>
-        <Col sm={{ offset: 2 }} xs={{ offset: 2 }}>
+        <Col sm={{ offset: 4 }} xs={{ offset: 2 }}>
           <Avatar className={styles.avatar} />
         </Col>
-        <Col lg={{ span: 24 }} med={{ span: 12 }} sm={0} xs={0}>
+        {/* <Col lg={{ span: 24 }} med={{ span: 12 }} sm={0} xs={0}>
           <Menu mode="horizontal" className={styles.menu}>
-            {/* <Menu.Item>
+            <Menu.Item>
               <Avatar className={styles.avatar} />
-            </Menu.Item> */}
+            </Menu.Item>
             <Menu.Item className={styles.menuRight}>About</Menu.Item>
             <Menu.Item className={styles.menuRight}>Projects</Menu.Item>
             <Menu.Item className={styles.menuRight}>Contact</Menu.Item>
           </Menu>
-        </Col>
-        {/* <Col xs={{ offset: 16 }} sm={{ offset: 19 }} lg={0} med={0}>
-          <HamburgerSpring
-            className={styles.hamburger}
-            toggleButton={openMobileMenu}
-            isActive={showMobileMenu}
-            barColor={"#3d5af1"}
-          />
         </Col> */}
+
         <Col
           xxl={0}
           xl={0}
@@ -56,17 +49,19 @@ const MainNav = () => {
             right
             width={280}
             height={300}
+            className={styles.slide}
             customBurgerIcon={
               <HamburgerSpring
                 style={{ width: "25px" }}
                 className={styles.hamburger}
                 toggleButton={openMobileMenu}
                 isActive={showMobileMenu}
-                barColor={"#3d5af1"}
+                // barColor={"#28c7fa"}
+                barColor={"white"}
               />
             }
           >
-            <Menu mode="vertical" theme="dark" className={styles.mobileMenu}>
+            <Menu mode="vertical" theme="light" className={styles.mobileMenu}>
               <Menu.Item>
                 <UserOutlined />
                 About

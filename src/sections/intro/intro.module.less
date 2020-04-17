@@ -1,21 +1,23 @@
 
 .container {
-    background: white;
     display: block;
-    position: relative;
-    min-height: 100%;
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000428 , #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 .typedBox {
     width: auto;
     padding-top: 5rem;
     display: inline-block;
     position: relative;
-    min-height: 55vh;
+    min-height: 40%;
     
 }
 
 .introText {
+    color: #f8f8f8;
     line-height: 5rem;
     font-size: 2rem;
     font-family: "Josefin Sans"
@@ -23,7 +25,7 @@
 
 .nameText{
     
-    color: #000;
+    color: #f3f169;
     font-weight: bold;
 }
 
@@ -36,11 +38,27 @@
 
 .wave {
     display: block;
-    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 4;
+    
+}
+
+.wave2{
+    display: block;
+    overflow: hidden;
+    z-index: 3;
+    position: absolute;
+    padding-top: 6%;
+}
+
+.wave3 {
+    display: block;
     overflow: hidden;
     position: relative;
-    bottom: 0;
-    
+    z-index: 2;
+    padding-top: 3%;
+    background: #f8f8f8;
 }
 
 
