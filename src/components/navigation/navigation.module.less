@@ -1,20 +1,50 @@
-
+@text-color: #3d5af1;
 
 .title {
     color: floralwhite;
 }
 
 .avatar {
+    
     height: 4rem;
+    top: -40;
+    
+}
 
+.burgerBtn {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+  }
+
+.menuRight {
+    float: right;
+    font-size: 24px;
+    color: #3d5af1;
+}
+
+.menuLeft {
+    float: left;
 }
 
 .mobileMenu {
     height: 100%;
-    z-index: 100;
+    display: flex;
+    justify-items: center;
+    font-weight: bold;
     position: relative;
+    padding-top: 75%;
+    text-align: center;
+}
+
+.overlay {
+    width: 100%
 }
 
 .hamburger {
-    border-style: none;
+    color: white;
+    position: absolute;
+    z-index: 1101;
 }

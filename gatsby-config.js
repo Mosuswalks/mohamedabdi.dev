@@ -38,6 +38,7 @@ module.exports = {
     },
     `gatsby-plugin-styled-jsx`,
     `gatsby-plugin-less`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
