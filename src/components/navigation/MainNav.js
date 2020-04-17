@@ -3,7 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import { slide as Slide } from "react-burger-menu"
 import { HamburgerSpring } from "react-animated-burgers"
 import { Col, Row, Menu, Button } from "antd"
-import { UserOutlined, CodeOutlined } from "@ant-design/icons"
+import { UserOutlined, CodeOutlined, MessageOutlined } from "@ant-design/icons"
 import { Link } from "gatsby"
 
 import Avatar from "../../images/avatar.svg"
@@ -47,7 +47,7 @@ const MainNav = () => {
           lg={0}
           med={0}
           sm={{ offset: 18 }}
-          xs={{ offset: 12 }}
+          xs={{ offset: 13 }}
         >
           <Slide
             pageWrapId={"page-wrap"}
@@ -75,7 +75,10 @@ const MainNav = () => {
                 <CodeOutlined />
                 Projects
               </Menu.Item>
-              <Menu.Item>Contact</Menu.Item>
+              <Menu.Item>
+                <MessageOutlined />
+                Contact
+              </Menu.Item>
             </Menu>
           </Slide>
         </Col>
