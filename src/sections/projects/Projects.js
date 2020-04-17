@@ -1,7 +1,6 @@
 import React from "react"
 import { Divider, Row, Col, Card, Space } from "antd"
 
-import Wave from "../../images/wave2.svg"
 import styles from "./projects.module.less"
 
 const Projects = () => {
