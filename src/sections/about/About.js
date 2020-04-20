@@ -5,7 +5,6 @@ import Avatar from "../../images/avatar.svg"
 import Wave from "../../images/wave2.svg"
 
 import styles from "./about.module.less"
-import Background from "../../images/Banner.svg"
 
 const { Title, Paragraph, Text } = Typography
 
@@ -14,7 +13,7 @@ const About = ({ children }) => {
     <section className={styles.container}>
       <div className={styles.about}>
         <Row>
-          <Col xs={{ span: 18, offset: 3 }} sm={{ span: 24 }}>
+          <Col xs={{ span: 18, offset: 3 }} sm={{ offset: 4, span: 16 }}>
             <Title level={3} className={styles.cardTitle}>
               About Me
             </Title>
@@ -28,7 +27,6 @@ const About = ({ children }) => {
           </Col>
         </Row>
       </div>
-      {/* <Wave className={styles.wave} /> */}
     </section>
   )
 }

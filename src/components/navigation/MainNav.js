@@ -20,7 +20,7 @@ const MainNav = () => {
   return (
     <div id="page-wrap">
       <Row>
-        <Col sm={{ offset: 4 }} xs={{ offset: 2 }}>
+        <Col sm={{ offset: 3, span: 4 }} xs={{ offset: 2 }}>
           <Avatar className={styles.avatar} />
         </Col>
         {/* <Col lg={{ span: 24 }} med={{ span: 12 }} sm={0} xs={0}>
@@ -39,7 +39,7 @@ const MainNav = () => {
           xl={0}
           lg={0}
           med={0}
-          sm={{ offset: 18 }}
+          sm={{ offset: 14 }}
           xs={{ offset: 13 }}
         >
           <Slide
@@ -57,7 +57,7 @@ const MainNav = () => {
                 toggleButton={openMobileMenu}
                 isActive={showMobileMenu}
                 // barColor={"#28c7fa"}
-                barColor={"white"}
+                barColor={"#28c7fa"}
               />
             }
           >
