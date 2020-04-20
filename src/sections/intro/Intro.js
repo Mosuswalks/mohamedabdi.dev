@@ -17,18 +17,23 @@ const Intro = () => {
     <section className={styles.container}>
       <div>
         <Row>
-          <Col xs={{ offset: 3, span: 20 }} sm={{ span: 12 }}>
+          <Col
+            xs={{ offset: 3, span: 20 }}
+            sm={{ span: 12 }}
+            md={{}}
+            lg={{ offset: 4, span: 8 }}
+          >
             <div className={styles.typedBox}>
               <Typed
                 className={styles.introText}
                 strings={[
-                  `Hello, I'm<br /><span class=${styles.nameText}>Mohamed Abdi</span><br /><span class='position-text deselect'>Full Stack Developer</span>`,
+                  `<span class=${styles.handWave}>👋🏾</span> Hello, I'm<br /><span class=${styles.nameText}>Mohamed Abdi</span><br /><span class='position-text deselect'>Full Stack Developer</span>`,
                 ]}
                 typeSpeed={50}
               />
             </div>
           </Col>
-          <Col lg={{ span: 9 }} sm={{ span: 12 }} xs={0}>
+          <Col lg={{}} sm={{}} xs={0}>
             <Coding className={styles.coding} />
           </Col>
         </Row>

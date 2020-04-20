@@ -19,65 +19,67 @@ const MainNav = () => {
 
   return (
     <div id="page-wrap">
-      <Row>
-        <Col sm={{ offset: 3, span: 4 }} xs={{ offset: 2 }}>
-          <Avatar className={styles.avatar} />
-        </Col>
-        {/* <Col lg={{ span: 24 }} med={{ span: 12 }} sm={0} xs={0}>
-          <Menu mode="horizontal" className={styles.menu}>
-            <Menu.Item>
-              <Avatar className={styles.avatar} />
-            </Menu.Item>
-            <Menu.Item className={styles.menuRight}>About</Menu.Item>
-            <Menu.Item className={styles.menuRight}>Projects</Menu.Item>
-            <Menu.Item className={styles.menuRight}>Contact</Menu.Item>
-          </Menu>
-        </Col> */}
-
-        <Col
-          xxl={0}
-          xl={0}
-          lg={0}
-          med={0}
-          sm={{ offset: 14 }}
-          xs={{ offset: 13 }}
-        >
-          <Slide
-            pageWrapId={"page-wrap"}
-            outerContainerId={"outer-container"}
-            isOpen={showMobileMenu}
-            right
-            width={280}
-            height={300}
-            className={styles.slide}
-            customBurgerIcon={
-              <HamburgerSpring
-                style={{ width: "25px" }}
-                className={styles.hamburger}
-                toggleButton={openMobileMenu}
-                isActive={showMobileMenu}
-                // barColor={"#28c7fa"}
-                barColor={"#28c7fa"}
-              />
-            }
-          >
-            <Menu mode="vertical" theme="light" className={styles.mobileMenu}>
+      <div>
+        <Row>
+          {/* <Col sm={{ span: 4 }} xs={{}}>
+            <Avatar className={styles.avatar} />
+          </Col> */}
+          <Col lg={{ span: 24 }} med={{ span: 12 }} sm={0} xs={0}>
+            <Menu mode="horizontal" className={styles.menu}>
               <Menu.Item>
-                <UserOutlined />
-                About
+                <Avatar className={styles.avatar} />
               </Menu.Item>
-              <Menu.Item>
-                <CodeOutlined />
-                Projects
-              </Menu.Item>
-              <Menu.Item>
-                <MessageOutlined />
-                Contact
-              </Menu.Item>
+              <Menu.Item className={styles.menuRight}>About</Menu.Item>
+              <Menu.Item className={styles.menuRight}>Projects</Menu.Item>
+              <Menu.Item className={styles.menuRight}>Contact</Menu.Item>
             </Menu>
-          </Slide>
-        </Col>
-      </Row>
+          </Col>
+
+          <Col
+            xxl={0}
+            xl={0}
+            lg={0}
+            med={0}
+            sm={{ offset: 14 }}
+            xs={{ offset: 21 }}
+          >
+            <Slide
+              pageWrapId={"page-wrap"}
+              outerContainerId={"outer-container"}
+              isOpen={showMobileMenu}
+              right
+              width={280}
+              height={300}
+              className={styles.slide}
+              customBurgerIcon={
+                <HamburgerSpring
+                  style={{ width: "25px" }}
+                  className={styles.hamburger}
+                  toggleButton={openMobileMenu}
+                  isActive={showMobileMenu}
+                  // barColor={"#28c7fa"}
+                  barColor={"#28c7fa"}
+                />
+              }
+            >
+              <Menu mode="vertical" theme="light" className={styles.mobileMenu}>
+                <Menu.Item>
+                  <UserOutlined />
+                  About
+                </Menu.Item>
+                <Menu.Item>
+                  <CodeOutlined />
+                  Projects
+                </Menu.Item>
+                <Menu.Item>
+                  <MessageOutlined />
+                  Contact
+                </Menu.Item>
+              </Menu>
+            </Slide>
+          </Col>
+        </Row>
+      </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ const { Header, Content, Footer } = Layout
 
 const PageLayout = ({ children }) => {
   return (
-    <Layout id="page-wrap">
+    <Layout className={styles.layout} id="page-wrap">
       <Header className={styles.header}>
         <MainNav />
       </Header>
