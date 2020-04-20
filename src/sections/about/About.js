@@ -10,7 +10,7 @@ const { Title, Paragraph, Text } = Typography
 
 const About = ({ children }) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="about">
       <div className={styles.about}>
         <Row>
           <Col xs={{ span: 24 }} sm={{ offset: 4, span: 16 }}>

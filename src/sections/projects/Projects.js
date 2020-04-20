@@ -10,7 +10,7 @@ const { Title } = Typography
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <div className={styles.wrapper}>
         <Title level={3} className={styles.projectTitle}>
           My Work

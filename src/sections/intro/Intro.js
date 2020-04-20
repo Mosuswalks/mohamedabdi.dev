@@ -1,5 +1,6 @@
 import React from "react"
-import { Col, Row } from "antd"
+import { Col, Row, Button } from "antd"
+import { DownloadOutlined } from "@ant-design/icons"
 import Typed from "react-typed"
 import Img from "gatsby-image"
 
@@ -10,7 +11,7 @@ import styles from "./intro.module.less"
 const Intro = () => {
   return (
     <section className={styles.container}>
-      <div>
+      <div className={styles.panel}>
         <Row>
           <Col
             xs={{ offset: 3, span: 20 }}
@@ -26,6 +27,14 @@ const Intro = () => {
                 ]}
                 typeSpeed={50}
               />
+              <Button
+                shape="round"
+                size="large"
+                className={styles.resumeButton}
+              >
+                <DownloadOutlined />
+                Resume
+              </Button>
             </div>
           </Col>
           <Col lg={{}} sm={{}} xs={0}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Row, Col, Divider } from "antd"
 import { PageLayout } from "../components"
-import { Intro, About, Projects } from "../sections"
+import { Intro, About, Projects, Contact } from "../sections"
 
 import SEO from "../components/seo"
 
@@ -12,6 +12,7 @@ const IndexPage = () => {
       <Intro />
       <About />
       <Projects />
+      <Contact />
     </PageLayout>
   )
 }
