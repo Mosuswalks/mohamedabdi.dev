@@ -13,8 +13,8 @@ const About = ({ children }) => {
     <section className={styles.container}>
       <div className={styles.about}>
         <Row>
-          <Col xs={{ span: 18, offset: 3 }} sm={{ offset: 4, span: 16 }}>
-            <Title level={3} className={styles.cardTitle}>
+          <Col xs={{ span: 24 }} sm={{ offset: 4, span: 16 }}>
+            <Title level={3} className={styles.aboutTitle}>
               About Me
             </Title>
             <Paragraph>

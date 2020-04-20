@@ -1,13 +1,8 @@
 import React from "react"
-import { Col, Row, Button, Typography } from "antd"
+import { Col, Row } from "antd"
 import Typed from "react-typed"
-import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import Wave from "../../images/navyway.svg"
-import Wave2 from "../../images/navyway2.svg"
-import Wave3 from "../../images/navyway3.svg"
-import Blob from "../../images/blob-shape.svg"
 import Coding from "../../images/workflow.svg"
 
 import styles from "./intro.module.less"
