@@ -1,25 +1,46 @@
+const JSin30 = {
+  name: "JS in 30",
+  description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
+                Mauris viverra nibh dui, sed pretium mauris ultricies a. 
+                Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
+                Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
+
+  img: "JS30",
+  tools: ["#NodeJS", "#Puppeteer", "#Node-Cron"],
+  githubLink: "github.com/mosuswalks",
+  liveSite: true,
+  siteLink: null,
+}
+
 const covidWatch = {
   name: "Covid Watch",
-  personal: true,
-  madeAt: "Personal Project",
+  description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
+                Mauris viverra nibh dui, sed pretium mauris ultricies a. 
+                Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
+                Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
+
   tools: ["#ReactJS", "#Axios", "#ChartJS", "#AntDesign"],
-  img: "covid-frame.png",
-  github: true,
+  img: "virus",
   link: "github.com/mosuswalks",
   liveSite: true,
   siteLink: "covid-watch.ca",
 }
 
 const snkrBot = {
-  name: "SNKR Bot",
-  personal: true,
-  madeAt: "Personal Project",
+  name: "SNKRS Canada Bot",
+  description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
+                Mauris viverra nibh dui, sed pretium mauris ultricies a. 
+                Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
+                Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
+
   tools: ["#NodeJS", "#Puppeteer", "#Node-Cron"],
-  img: "snkrs.svg",
-  github: true,
-  link: "covid-watch.ca",
-  site: false,
+  img: "snkrs",
+  githubLink: "github.com/mosuswalks/snkrs-bot",
+  liveSite: false,
   siteLink: null,
 }
 
-export default { snkrBot, covidWatch }
+export default { JSin30, covidWatch, snkrBot }
