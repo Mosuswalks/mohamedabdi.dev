@@ -27,10 +27,14 @@ const Intro = () => {
                 ]}
                 typeSpeed={50}
               />
+              <br />
               <Button
                 shape="round"
                 size="large"
                 className={styles.resumeButton}
+                onClick={() => {
+                  window.open("../../pages/file/resume.pdf")
+                }}
               >
                 <DownloadOutlined />
                 Resume

@@ -18,7 +18,7 @@ const MainNav = () => {
   }
 
   return (
-    <div id="page-wrap">
+    <div id="page-wrap" className={styles.wrapper}>
       <div>
         <Row>
           {/* <Col sm={{ span: 4 }} xs={{}}>
