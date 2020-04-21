@@ -1,5 +1,5 @@
 import React from "react"
-import { Col, Row, Typography, Button, Tooltip } from "antd"
+import { Col, Row, Typography, Button, Tooltip, Divider } from "antd"
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons"
 
 import styles from "./about.module.less"
@@ -11,10 +11,11 @@ const About = ({ children }) => {
     <section className={styles.container} id="about">
       <div className={styles.about}>
         <Row>
-          <Col xs={{ offset: 2, span: 22 }} sm={{ offset: 4, span: 16 }}>
+          <Col xs={{ offset: 2, span: 20 }} sm={{ offset: 4, span: 16 }}>
             <Title level={3} className={styles.aboutTitle}>
-              About Me
+              About Me <Divider style={{ background: "#000" }} />
             </Title>
+
             <div className={styles.paragraph}>
               <Paragraph>I'm a Full-stack Developer from Toronto.</Paragraph>
               <Paragraph>
@@ -35,7 +36,7 @@ const About = ({ children }) => {
         </Row>
         <Row gutter={16}>
           <Col xs={{ offset: 2 }}>
-            <Tooltip title="Github">
+            <Tooltip placement="bottom" title="Github">
               <Button
                 onClick={() => {
                   window.open("https://github.com/mosuswalks", "_blank")
@@ -48,7 +49,7 @@ const About = ({ children }) => {
             </Tooltip>
           </Col>
           <Col>
-            <Tooltip title="Linkedin">
+            <Tooltip placement="bottom" title="Linkedin">
               <Button
                 onClick={() => {
                   window.open("https://linkedin.com/in/mohamedaabdi", "_blank")

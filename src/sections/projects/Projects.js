@@ -1,20 +1,23 @@
 import React from "react"
-import { Row, Col, Card, Typography } from "antd"
-
-import NavyBlob from "../../images/blob-navyway.svg"
-import NavyBlob2 from "../../images/blob-navyway2.svg"
-
+import { Row, Col, Card, Typography, Divider } from "antd"
+import { GithubOutlined, DesktopOutlined } from "@ant-design/icons"
 import styles from "./projects.module.less"
 
 const { Title } = Typography
+const { Meta } = Card
 
 const Projects = () => {
   return (
     <section id="projects">
       <div className={styles.wrapper}>
-        <Title level={3} className={styles.projectTitle}>
-          My Work
-        </Title>
+        <Row>
+          <Col xs={{ span: 24 }}>
+            <Title level={3} className={styles.projectTitle}>
+              My Work
+              <Divider style={{ background: "#000" }} />
+            </Title>
+          </Col>
+        </Row>
         <div className={styles.projectCards}>
           <Row>
             <Col xs={{ span: 24 }} className={styles.col}>
@@ -37,6 +40,7 @@ const Projects = () => {
                   euismod. Mauris viverra nibh dui, sed pretium mauris ultricies
                   a. Nullam tortor velit, rutrum eu augue quis, commodo tempor
                   ante.
+                  <Meta title="Last Updated" description={<GithubOutlined />} />
                 </Card>
               </div>
             </Col>

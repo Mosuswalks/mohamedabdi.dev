@@ -1,6 +1,15 @@
 import React from "react"
-import { Row, Col, Typography, Form, Button, Input } from "antd"
-import { SendOutlined, MessageOutlined } from "@ant-design/icons"
+import {
+  Row,
+  Col,
+  Divider,
+  Typography,
+  Form,
+  Button,
+  Input,
+  Tooltip,
+} from "antd"
+import { SendOutlined } from "@ant-design/icons"
 
 import styles from "./contact.module.less"
 
@@ -12,7 +21,7 @@ const Contact = () => {
       span: 2,
     },
     wrapperCol: {
-      span: 16,
+      span: 12,
     },
   }
 
@@ -29,10 +38,15 @@ const Contact = () => {
   return (
     <section id="#contact">
       <div className={styles.container}>
-        <Title level={3} className={styles.title}>
-          Contact
-          <MessageOutlined />
-        </Title>
+        <Row>
+          <Col xs={{ span: 24 }}>
+            <Title level={3} className={styles.title}>
+              Contact
+              <Divider style={{ background: "#000" }} />
+            </Title>
+          </Col>
+        </Row>
+
         <Form
           {...layout}
           label="Name"
@@ -44,18 +58,21 @@ const Contact = () => {
             },
           ]}
         >
-          <Form.Item
-            label="Name"
-            name="name"
-            rules={[
-              {
-                required: true,
-                message: "Please input your first & last name",
-              },
-            ]}
-          >
-            <Input className={styles.formInputs} />
-          </Form.Item>
+          <Col>
+            <Form.Item
+              label="Name"
+              name="name"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your first & last name",
+                },
+              ]}
+            >
+              <Input className={styles.formInputs} />
+            </Form.Item>
+          </Col>
+
           <Form.Item
             label="Email"
             name="email"
@@ -69,6 +86,7 @@ const Contact = () => {
           >
             <Input className={styles.formInputs} />
           </Form.Item>
+
           <Form.Item
             label="Message"
             name="message"
