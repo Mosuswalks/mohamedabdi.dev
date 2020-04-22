@@ -43,7 +43,6 @@ const About = ({ children }) => {
                 }}
                 shape="circle"
                 alt="github"
-                className={styles.icons}
                 icon={<GithubOutlined />}
               />
             </Tooltip>
@@ -56,7 +55,6 @@ const About = ({ children }) => {
                 }}
                 shape="circle"
                 alt="linkedin"
-                className={styles.icons}
                 icon={<LinkedinOutlined />}
               />
             </Tooltip>

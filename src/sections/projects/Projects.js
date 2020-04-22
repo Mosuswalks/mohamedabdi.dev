@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Row, Col, Card, Typography, Divider } from "antd"
+import { Row, Col, Card, Typography, Divider, Button, Tooltip } from "antd"
 import { GithubOutlined, DesktopOutlined } from "@ant-design/icons"
-import Image from "../../components/Image"
 
 import { project } from "../../constants"
 import Snkrs from "../../images/snkrs.svg"
@@ -10,7 +9,6 @@ import Js from "../../images/logos/javascript.svg"
 import styles from "./projects.module.less"
 
 const { Title } = Typography
-const { Meta } = Card
 
 const Projects = () => {
   return (
@@ -37,9 +35,41 @@ const Projects = () => {
                   ) : project.img === "JS30" ? (
                     <Js />
                   ) : null}
+
                   <Title level={4}>{project.name}</Title>
+
                   {project.description}
-                  <Meta description={<GithubOutlined />} />
+                  <div className={styles.projectIconsDiv}>
+                    <Row gutter={8}>
+                      <Col>
+                        <Tooltip title="Github">
+                          <Button
+                            className={styles.iconButtons}
+                            onClick={() => {
+                              window.open(`${project.github}`, "__blank")
+                            }}
+                            shape="circle"
+                            icon={<GithubOutlined />}
+                          />
+                        </Tooltip>
+                      </Col>
+
+                      {project.liveSite ? (
+                        <Col>
+                          <Tooltip title="Visit Site">
+                            <Button
+                              className={styles.iconButtons}
+                              onClick={() => {
+                                window.open(`${project.siteLink}`, "__blank")
+                              }}
+                              shape="circle"
+                              icon={<DesktopOutlined />}
+                            />
+                          </Tooltip>
+                        </Col>
+                      ) : null}
+                    </Row>
+                  </div>
                 </Card>
               </Col>
             ))}

@@ -7,10 +7,10 @@ const JSin30 = {
                 Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
 
   img: "JS30",
-  tools: ["#NodeJS", "#Puppeteer", "#Node-Cron"],
-  githubLink: "github.com/mosuswalks",
+
+  github: "https://github.com/mosuswalks",
   liveSite: true,
-  siteLink: null,
+  siteLink: "https://github.com/mosuswalks",
 }
 
 const covidWatch = {
@@ -21,24 +21,23 @@ const covidWatch = {
                 Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
                 Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
 
-  tools: ["#ReactJS", "#Axios", "#ChartJS", "#AntDesign"],
   img: "virus",
-  link: "github.com/mosuswalks",
+  github: "https://github.com/mosuswalks/covid-watch",
   liveSite: true,
-  siteLink: "covid-watch.ca",
+  siteLink: "https://covid-watch.ca",
 }
 
 const snkrBot = {
   name: "SNKRS Canada Bot",
+  problem: ``,
   description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
                 Mauris viverra nibh dui, sed pretium mauris ultricies a. 
                 Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
                 Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
 
-  tools: ["#NodeJS", "#Puppeteer", "#Node-Cron"],
   img: "snkrs",
-  githubLink: "github.com/mosuswalks/snkrs-bot",
+  github: "https://github.com/mosuswalks/snkrs-bot",
   liveSite: false,
   siteLink: null,
 }
