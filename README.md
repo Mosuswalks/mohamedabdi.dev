@@ -1,99 +1,176 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://github.com/mosuswalks/mohamedabdi.dev">
+    <img src="src/images/avatar.svg" alt="Logo" width="80" height="80">
   </a>
+
+  <h3 align="center">mohamedabdi.dev</h3>
+
+  <p align="center">
+    My personal portfolio site.
+    <br />
+    <a href="https://github.com/mosuswalks/mohamedabdi.dev"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/mosuswalks/mohamedabdi.dev">View Site</a>
+    ·
+    <a href="https://github.com/mosuswalks/mohamedabdi.dev/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/mosuswalks/mohamedabdi.dev/issues">Request Feature</a>
+  </p>
 </p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
-## 🚀 Quick start
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-1.  **Create a Gatsby site.**
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
 
-1.  **Start developing.**
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-    Navigate into your new site’s directory and start it up.
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
 
-1.  **Open the source code and start editing!**
 
-    Your site is now running at `http://localhost:8000`!
+### Built With
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+* [Gatsby](https://Gatsbyjs.org/)
+* [Ant Design](https://ant.design)
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🧐 What's inside?
+### Hosting
+* [Netlify](https://netlify.com)
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+<!-- GETTING STARTED -->
+## Getting Started
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+To get a local copy up and running follow these simple steps.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+### Prerequisites
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+* yarn
+```sh
+yarn upgrade --latest
+```
+* npm 
+```sh
+npm instal npm@latest -g
+```
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+### Installation
+ 
+1. Clone the repo
+```sh
+git clone https://github.com/mosuswalks/mohamedabdi.dev.git
+```
+2. Install NPM packages
+```sh
+yarn install
+```
+or
+```sh
+npm install
+```
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+<!-- USAGE EXAMPLES -->
+## Usage
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+<!-- ROADMAP -->
+## Roadmap
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+See the [open issues](https://github.com/mosuswalks/mohamedabdi.dev/issues) for a list of proposed features (and known issues).
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+<!-- CONTRIBUTING -->
+## Contributing
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Mohamed Abdi - [@](https://mohamedabdi.dev/) - mohamedaabdi@yahoo.ca
+
+Project Link: [https://github.com/mosuswalks/mohamedabdi.dev](https://github.com/mosuswalks/mohamedabdi.dev)
+
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/mosuswalks/mohamedabdi.dev.svg?style=flat-square
+[contributors-url]: https://github.com/mosuswalks/mohamedabdi.dev/contributors
+[forks-shield]: https://img.shields.io/github/forks/mosuswalks/mohamedabdi.dev.svg?style=flat-square
+[forks-url]: https://github.com/mosuswalks/mohamedabdi.dev/network/members
+[stars-shield]: https://img.shields.io/github/stars/mosuswalks/mohamedabdi.dev.svg?style=flat-square
+[stars-url]: https://github.com/mosuswalks/mohamedabdi.dev/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mosuswalks/mohamedabdi.dev.svg?style=flat-square
+[issues-url]: https://github.com/mosuswalks/mohamedabdi.dev/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/mosuswalks/mohamedabdi.dev/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/mohamedaabdi
+[product-screenshot]: images/screenshot.png
