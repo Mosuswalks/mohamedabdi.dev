@@ -29,9 +29,9 @@ const MainNav = () => {
               <Menu.Item>
                 <Avatar className={styles.avatar} />
               </Menu.Item>
-              <AnchorLink>
-                <Menu.Item className={styles.menuRight}>About</Menu.Item>
-              </AnchorLink>
+              {/* <AnchorLink> */}
+              <Menu.Item className={styles.menuRight}>About</Menu.Item>
+              {/* </AnchorLink> */}
               <Menu.Item className={styles.menuRight}>Projects</Menu.Item>
               <Menu.Item className={styles.menuRight}>Contact</Menu.Item>
             </Menu>
@@ -67,18 +67,18 @@ const MainNav = () => {
               <Menu mode="vertical" theme="light" className={styles.mobileMenu}>
                 <AnchorLink href="#about">
                   <Menu.Item>
-                    <UserOutlined />
+                    {/* <UserOutlined /> */}
                     About
                   </Menu.Item>
                 </AnchorLink>
                 <AnchorLink href="#projects">
                   <Menu.Item>
-                    <CodeOutlined />
+                    {/* <CodeOutlined /> */}
                     Projects
                   </Menu.Item>
                 </AnchorLink>
                 <AnchorLink href="#contacts">
-                  <MessageOutlined />
+                  {/* <MessageOutlined /> */}
                   Contact
                 </AnchorLink>
               </Menu>

@@ -14,6 +14,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cacae43a-f5ba-4ec7-aa34-716b37375f2f/deploy-status)](https://app.netlify.com/sites/trusting-shannon-f2cd5f/deploys)
 
 
 
@@ -61,7 +62,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Every great developer has a personal website filled with amazing examples of their code - Here's mine.
 
+Feel free fork and edit this project to your liking.
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 
@@ -91,7 +94,7 @@ yarn upgrade --latest
 ```
 * npm 
 ```sh
-npm instal npm@latest -g
+npm install npm@latest -g
 ```
 
 ### Installation
@@ -150,7 +153,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Mohamed Abdi - [@](https://mohamedabdi.dev/) - mohamedaabdi@yahoo.ca
+Mohamed - [@](https://mohamedabdi.dev/) - mohamedaabdi@yahoo.ca
 
 Project Link: [https://github.com/mosuswalks/mohamedabdi.dev](https://github.com/mosuswalks/mohamedabdi.dev)
 

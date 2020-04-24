@@ -35,7 +35,7 @@ const About = ({ children }) => {
           </Col>
         </Row>
         <Row gutter={16}>
-          <Col xs={{ offset: 2 }}>
+          <Col xs={{ offset: 2 }} lg={{ offset: 4 }}>
             <Tooltip placement="bottom" title="Github">
               <Button
                 onClick={() => {

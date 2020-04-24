@@ -41,7 +41,7 @@ const Intro = () => {
               </Button>
             </div>
           </Col>
-          <Col lg={{}} sm={{}} xs={0}>
+          <Col lg={12} sm={{}} xs={0}>
             <Coding className={styles.coding} />
           </Col>
         </Row>

@@ -18,6 +18,7 @@ const { Title } = Typography
 const Contact = () => {
   const layout = {
     labelCol: {
+      offset: 4,
       span: 2,
     },
     wrapperCol: {
@@ -27,6 +28,7 @@ const Contact = () => {
 
   const tailLayout = {
     wrapperCol: {
+      offset: 6,
       span: 1,
     },
   }
@@ -39,7 +41,7 @@ const Contact = () => {
     <section id="#contact">
       <div className={styles.container}>
         <Row>
-          <Col xs={{ span: 24 }}>
+          <Col xs={{ offset: 3, span: 18 }}>
             <Title level={3} className={styles.title}>
               Contact
               <Divider style={{ background: "#000" }} />

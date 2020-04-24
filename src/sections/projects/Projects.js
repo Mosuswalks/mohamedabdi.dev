@@ -24,9 +24,14 @@ const Projects = () => {
         </Row>
 
         <div className={styles.projectCards}>
-          <Row>
+          <Row gutter={16}>
             {Object.values(project).map(project => (
-              <Col xs={{ span: 24 }} className={styles.col}>
+              <Col
+                xs={{ span: 24 }}
+                lg={8}
+                className={styles.col}
+                key={project.name}
+              >
                 <Card className={styles.cards}>
                   {project.img === "virus" ? (
                     <Virus />
