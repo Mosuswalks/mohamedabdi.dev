@@ -5,7 +5,13 @@
 }
 
 .avatar {
-    
+    height: 3rem;
+    top: -40;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
 }
 
 .wrapper {
@@ -14,13 +20,10 @@
 }
 
 .menuRight {
-    float: right;
-    font-size: 24px;
+
 }
 
-.menuLeft {
-    float: left;
-}
+
 
 .mobileMenu {
     height: 100%;
@@ -30,7 +33,8 @@
     padding-top: 75%;
     text-align: center;
     background: #0e153a;
-    color: #e2f3f5
+    color: #e2f3f5;
+    overflow: hidden;
 }
 
 .slide {
@@ -52,3 +56,31 @@
     position: absolute;
     z-index: 1101;
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+   
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .menu {
+        border-style: none;
+    }
+    
+    .mobileMenu {
+        overflow: hidden;
+    }
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }

@@ -1,10 +1,6 @@
 const JSin30 = {
   name: "JS in 30",
-  description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
-                Mauris viverra nibh dui, sed pretium mauris ultricies a. 
-                Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
-                Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
+  description: `This project was built to solidify my understanding of Javascript fundamentals and advanced topics.`,
 
   img: "JS30",
 
@@ -15,11 +11,8 @@ const JSin30 = {
 
 const covidWatch = {
   name: "Covid Watch",
-  description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
-                Mauris viverra nibh dui, sed pretium mauris ultricies a. 
-                Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
-                Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
+  description: `This project was buit to help people visualise the impact of corona virus.  
+                The App fetches real time data from John Hopskins University through an API.`,
 
   img: "virus",
   github: "https://github.com/mosuswalks/covid-watch",
@@ -30,11 +23,7 @@ const covidWatch = {
 const snkrBot = {
   name: "SNKRS Canada Bot",
   problem: ``,
-  description: `lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nam mauris felis, elementum in porta mollis, vestibulum at ex. 
-                Mauris viverra nibh dui, sed pretium mauris ultricies a. 
-                Curabitur euismod ante lorem, eu hendrerit leo semper euismod. 
-                Nullam tortor velit, rutrum eu augue quis, commodo tempor ante.`,
+  description: `A fully automated sneaker bot for purchasing exclusive sneakers on the Nike Canada SNKR's site.`,
 
   img: "snkrs",
   github: "https://github.com/mosuswalks/snkrs-bot",

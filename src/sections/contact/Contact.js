@@ -28,8 +28,9 @@ const Contact = () => {
 
   const tailLayout = {
     wrapperCol: {
-      offset: 6,
-      span: 1,
+      xs: {
+        span: 1,
+      },
     },
   }
 

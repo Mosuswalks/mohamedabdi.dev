@@ -2,7 +2,6 @@ import React from "react"
 import { Col, Row, Button } from "antd"
 import { DownloadOutlined } from "@ant-design/icons"
 import Typed from "react-typed"
-import Img from "gatsby-image"
 
 import Coding from "../../images/workflow.svg"
 
@@ -33,7 +32,7 @@ const Intro = () => {
                 size="large"
                 className={styles.resumeButton}
                 onClick={() => {
-                  window.open("../../pages/file/resume.pdf")
+                  window.open("./static/resume/resume.pdf")
                 }}
               >
                 <DownloadOutlined />
@@ -46,11 +45,6 @@ const Intro = () => {
           </Col>
         </Row>
       </div>
-      {/* <Row>
-        <Wave className={styles.wave} />
-        <Wave2 className={styles.wave2} />
-        <Wave3 className={styles.wave3} />
-      </Row> */}
     </section>
   )
 }
