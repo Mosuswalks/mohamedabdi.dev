@@ -29,8 +29,8 @@ const Navbar = () => {
     `)
 
     return (
-        <header className="">
-            <div className="flex items-center justify-between px-4 bg-gray-100 pb-2">
+        <header className="relative">
+            <div className="flex items-center justify-between px-4 bg-gray-100 pb-2 lg:px-12">
                 <div>
                     <Avatar className="h-16 spa" />
                 </div>
@@ -47,7 +47,9 @@ const Navbar = () => {
             </div>
 
             <motion.div
-                className="bg-gray-100 px-4 pt-3 pb-4 "
+                className={`${
+                    isMenuOpen ? "show" : null
+                } absolute w-full bg-gray-100 px-4 pt-3 pb-4 lg:w-1/3 lg:border lg:right-0 lg:rounded lg:mx-8`}
                 initial={{ scale: 0 }}
                 animate={isMenuOpen ? { scale: 1 } : { scale: 0 }}
                 transition={{
