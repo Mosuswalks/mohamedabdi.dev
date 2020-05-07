@@ -29,7 +29,11 @@ const Navbar = () => {
     `)
 
     return (
-        <header className="relative">
+        <header
+            className={`${
+                isMenuOpen ? "lg:shadow lg:border" : "shadow border"
+            } relative`}
+        >
             <div className="flex items-center justify-between px-4 bg-gray-100 pb-2 lg:px-12">
                 <div>
                     <Avatar className="h-16 spa" />
@@ -49,7 +53,7 @@ const Navbar = () => {
             <motion.div
                 className={`${
                     isMenuOpen ? "show" : null
-                } absolute w-full bg-gray-100 px-4 pt-3 pb-4 lg:w-1/3 lg:border lg:right-0 lg:rounded lg:mx-8`}
+                } absolute w-full z-10 bg-gray-100 px-4 pt-3 pb-4 border-b shadow-lg lg:w-1/3 lg:bg-white lg:border lg:right-0 lg:rounded-lg lg:mx-8 lg:my-3`}
                 initial={{ scale: 0 }}
                 animate={isMenuOpen ? { scale: 1 } : { scale: 0 }}
                 transition={{
