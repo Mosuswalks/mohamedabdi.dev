@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
     SendOutlined,
     GithubOutlined,
@@ -7,7 +7,34 @@ import {
 } from "@ant-design/icons"
 import { motion } from "framer-motion"
 
+function encode(data) {
+    return Object.keys(data)
+        .map(
+            key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&")
+}
+
 const Contact = () => {
+    const [state, setState] = useState({})
+
+    const handleChange = e => {
+        setState({ ...state, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        const form = e.target
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+                "form-name": form.getAttribute("name"),
+                ...state,
+            }),
+        }).catch(error => alert(error))
+    }
+
     return (
         <section className="bg-gray-100" id="contact">
             <div className="w-4/5 m-auto md:w-1/2 ">
@@ -33,7 +60,12 @@ const Contact = () => {
                         name="contact"
                         method="POST"
                         data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        onSubmit={handleSubmit}
                     >
+                        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                        <input type="hidden" name="form-name" value="contact" />
+
                         <div className="flex flex-wrap px-6 ">
                             <div className="">
                                 <label
@@ -51,6 +83,7 @@ const Contact = () => {
                                 type="text"
                                 name="fullname"
                                 placeholder="Jane Doe"
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -71,6 +104,7 @@ const Contact = () => {
                                 type="email"
                                 name="email"
                                 placeholder="jane@example.com"
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -90,6 +124,7 @@ const Contact = () => {
                                 id="inline-message"
                                 type="textarea"
                                 name="message"
+                                onChange={handleChange}
                             />
                         </div>
                         <div className="px-6 pt-3">
