@@ -9,8 +9,10 @@ const Hero = () => {
             <div className="w-4/5 m-auto pt-10">
                 <motion.div
                     className="flex justify-center"
-                    animate={{}}
-                    transition={{ ease: "easeIn" }}
+                    //Animate to
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ ease: "easeIn", duration: 1 }}
                 >
                     <div className="">
                         <motion.span
