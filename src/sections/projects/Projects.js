@@ -1,88 +1,92 @@
-import React, { useState, useEffect } from "react"
-import { Row, Col, Card, Typography, Divider, Button, Tooltip } from "antd"
+import React from "react"
+import { motion } from "framer-motion"
 import { GithubOutlined, DesktopOutlined } from "@ant-design/icons"
-
-import { project } from "../../constants"
 import Snkrs from "../../images/snkrs.svg"
 import Virus from "../../images/virus.svg"
 import Js from "../../images/logos/javascript.svg"
-import styles from "./projects.module.less"
 
-const { Title } = Typography
+import { projects } from "../../constants"
 
 const Projects = () => {
-  return (
-    <section id="projects">
-      <div className={styles.wrapper}>
-        <Row>
-          <Col xs={{ span: 24 }}>
-            <Title level={3} className={styles.projectTitle}>
-              Projects
-              <Divider style={{ background: "#000" }} />
-            </Title>
-          </Col>
-        </Row>
-
-        <div className={styles.projectCards}>
-          <Row gutter={16}>
-            {Object.values(project).map(project => (
-              <Col
-                xs={{ span: 24 }}
-                lg={8}
-                className={styles.col}
-                key={project.name}
-              >
-                <Card className={styles.cards}>
-                  {project.img === "virus" ? (
-                    <Virus />
-                  ) : project.img === "snkrs" ? (
-                    <Snkrs />
-                  ) : project.img === "JS30" ? (
-                    <Js />
-                  ) : null}
-
-                  <Title level={4}>{project.name}</Title>
-
-                  {project.description}
-                  <div className={styles.projectIconsDiv}>
-                    <Row gutter={8}>
-                      <Col>
-                        <Tooltip title="Github">
-                          <Button
-                            className={styles.iconButtons}
-                            onClick={() => {
-                              window.open(`${project.github}`, "__blank")
-                            }}
-                            shape="circle"
-                            icon={<GithubOutlined />}
-                          />
-                        </Tooltip>
-                      </Col>
-
-                      {project.liveSite ? (
-                        <Col>
-                          <Tooltip title="Visit Site">
-                            <Button
-                              className={styles.iconButtons}
-                              onClick={() => {
-                                window.open(`${project.siteLink}`, "__blank")
-                              }}
-                              shape="circle"
-                              icon={<DesktopOutlined />}
-                            />
-                          </Tooltip>
-                        </Col>
-                      ) : null}
-                    </Row>
-                  </div>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </div>
-      </div>
-    </section>
-  )
+    return (
+        <section className="bg-gray-200 pb-12 border shadow-2xl" id="projects">
+            <div className="w-4/5 m-auto pt-12">
+                <div>
+                    <h2 className="text-2xl">Projects</h2>
+                </div>
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    {Object.values(projects).map(project => (
+                        <div className="bg-white rounded-lg shadow overflow-hidden border">
+                            <div className="">
+                                {project.img === "virus" ? (
+                                    <Virus />
+                                ) : project.img === "snkrs" ? (
+                                    <Snkrs />
+                                ) : project.img === "JS30" ? (
+                                    <Js />
+                                ) : null}
+                            </div>
+                            <div className="m-8">
+                                <div>
+                                    <h4 className="font-semibold text-xl">
+                                        {project.name}
+                                    </h4>
+                                </div>
+                                <div className="font-semibold text-gray-600 uppercase text-xs tracking-widest">
+                                    {project.tech_stack.map((tech, i) => (
+                                        <span>
+                                            {project.tech_stack[i + 1] ? (
+                                                <span key={i}>
+                                                    {" "}
+                                                    {tech} &bull;
+                                                </span>
+                                            ) : (
+                                                <span key={i}> {tech}</span>
+                                            )}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className="my-4 leading-snug">
+                                    <p>{project.description}</p>
+                                </div>
+                                <div className="flex my-3 text-lg text-gray-700 mt-auto">
+                                    <div className="hover:text-blue-600 self-end">
+                                        <motion.button
+                                            onClick={() =>
+                                                window.open(
+                                                    project.github,
+                                                    "__blank"
+                                                )
+                                            }
+                                            whileHover={{ scale: 1.3 }}
+                                        >
+                                            <GithubOutlined type="button" />
+                                        </motion.button>
+                                    </div>
+                                    <div className="ml-4 hover:text-blue-600">
+                                        {project.siteLink ? (
+                                            <motion.button
+                                                onClick={() =>
+                                                    window.open(
+                                                        project.siteLink,
+                                                        "__blank"
+                                                    )
+                                                }
+                                                whileHover={{ scale: 1.3 }}
+                                                whileClick={{ scale: 0.9 }}
+                                            >
+                                                <DesktopOutlined />
+                                            </motion.button>
+                                        ) : null}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default Projects

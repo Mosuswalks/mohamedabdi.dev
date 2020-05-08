@@ -1,117 +1,115 @@
 import React from "react"
 import {
-  Row,
-  Col,
-  Divider,
-  Typography,
-  Form,
-  Button,
-  Input,
-  Tooltip,
-} from "antd"
-import { SendOutlined } from "@ant-design/icons"
-
-import styles from "./contact.module.less"
-
-const { Title } = Typography
+    SendOutlined,
+    GithubOutlined,
+    SlackOutlined,
+    LinkedinOutlined,
+} from "@ant-design/icons"
+import { motion } from "framer-motion"
 
 const Contact = () => {
-  const layout = {
-    labelCol: {
-      offset: 4,
-      span: 2,
-    },
-    wrapperCol: {
-      span: 12,
-    },
-  }
+    return (
+        <section className="bg-gray-100" id="contact">
+            <div className="w-4/5 m-auto md:w-1/2 ">
+                <div className="leading-snug">
+                    <div className="pt-6 ml-6 text-4xl font-semibold text-gray-800 lg:text-5xl">
+                        <h3>Get in Touch!</h3>
+                    </div>
+                    <div className="px-6 ml-2 text-2xl text-gray-700">
+                        <span className="text-gray-800">
+                            <GithubOutlined />
+                        </span>
+                        <span className="text-blue-700 pl-3">
+                            <LinkedinOutlined />
+                        </span>
+                        <span className="text-pink-600 pl-3">
+                            <SlackOutlined />
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <form
+                        className="pt-12 pb-12 lg:m-3"
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                    >
+                        <div className="flex flex-wrap px-6 ">
+                            <div className="">
+                                <label
+                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-1"
+                                    for="grid-full-name"
+                                >
+                                    Full Name
+                                </label>
+                            </div>
+                            <motion.input
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 1.01 }}
+                                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                                id="inline-full-name"
+                                type="text"
+                                name="fullname"
+                                placeholder="Jane Doe"
+                            />
+                        </div>
 
-  const tailLayout = {
-    wrapperCol: {
-      xs: {
-        span: 1,
-      },
-    },
-  }
+                        <div class="flex flex-wrap px-6 pt-6">
+                            <div className="">
+                                <label
+                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-1"
+                                    for="grid-full-name"
+                                >
+                                    Email
+                                </label>
+                            </div>
+                            <motion.input
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 1.01 }}
+                                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                                id="inline-email"
+                                type="email"
+                                name="email"
+                                placeholder="jane@example.com"
+                            />
+                        </div>
 
-  const submitForm = () => {
-    console.log("Form Submitted")
-  }
-
-  return (
-    <section id="#contact">
-      <div className={styles.container}>
-        <Row>
-          <Col xs={{ offset: 3, span: 18 }}>
-            <Title level={3} className={styles.title}>
-              Contact
-              <Divider style={{ background: "#000" }} />
-            </Title>
-          </Col>
-        </Row>
-
-        <Form
-          {...layout}
-          label="Name"
-          name="name"
-          rules={[
-            {
-              required: true,
-              message: "Please input your First & Last name",
-            },
-          ]}
-        >
-          <Col>
-            <Form.Item
-              label="Name"
-              name="name"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your first & last name",
-                },
-              ]}
-            >
-              <Input className={styles.formInputs} />
-            </Form.Item>
-          </Col>
-
-          <Form.Item
-            label="Email"
-            name="email"
-            rules={[
-              {
-                required: true,
-                type: "email",
-                message: "Please enter a valid email address",
-              },
-            ]}
-          >
-            <Input className={styles.formInputs} />
-          </Form.Item>
-
-          <Form.Item
-            label="Message"
-            name="message"
-            required={[
-              {
-                required: true,
-                message: "Please enter a message",
-              },
-            ]}
-          >
-            <Input.TextArea className={styles.formInputs} />
-          </Form.Item>
-          <Form.Item {...tailLayout}>
-            <Button shape="round" className={styles.formButton}>
-              <SendOutlined />
-              Send
-            </Button>
-          </Form.Item>
-        </Form>
-      </div>
-    </section>
-  )
+                        <div class="flex flex-wrap px-6 pt-6">
+                            <div className="">
+                                <label
+                                    class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-1"
+                                    for="grid-message"
+                                >
+                                    Message
+                                </label>
+                            </div>
+                            <motion.textarea
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 1.01 }}
+                                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                                id="inline-message"
+                                type="textarea"
+                                name="message"
+                            />
+                        </div>
+                        <div className="px-6 pt-3">
+                            <motion.button
+                                className="px-3 bg-blue-500 border font-bold text-gray-100 rounded shadow py-2 px-4 mt-4"
+                                type="submit"
+                                whileHover={{ scale: 1.02 }}
+                                whileTap={{ scale: 1.01 }}
+                            >
+                                <span className="flex items-center ">
+                                    <SendOutlined className="pr-1" />
+                                    Send
+                                </span>
+                            </motion.button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default Contact

@@ -1,20 +1,20 @@
 import React, { useState } from "react"
-import { Row, Col, Divider } from "antd"
-import { PageLayout } from "../components"
-import { Intro, About, Projects, Contact } from "../sections"
-
+import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Hero, About, Projects, Contact } from "../sections"
+
+import "./global.css"
 
 const IndexPage = () => {
-  return (
-    <PageLayout id="outer-container">
-      <SEO title="Home" />
-      <Intro />
-      <About />
-      <Projects />
-      <Contact />
-    </PageLayout>
-  )
+    return (
+        <Layout>
+            <SEO title="Home" />
+            <Hero />
+            <About />
+            <Projects />
+            <Contact />
+        </Layout>
+    )
 }
 
 export default IndexPage
