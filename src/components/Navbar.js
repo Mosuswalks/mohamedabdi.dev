@@ -66,7 +66,7 @@ const Navbar = () => {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 1 }}
                 >
-                    <a href="#" className="text-2xl">
+                    <a href="#projects" className="text-2xl">
                         <span className="flex items-center px-2 rounded hover:bg-gray-300 mb-3">
                             <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
                                 <CodeOutlined />
@@ -84,7 +84,7 @@ const Navbar = () => {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 1 }}
                 >
-                    <a href="#" className="font-semibold text-2xl">
+                    <a href="#about" className="font-semibold text-2xl">
                         <span className="flex items-center px-2 rounded hover:bg-gray-300 mb-3">
                             <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
                                 <UserOutlined />
@@ -103,7 +103,7 @@ const Navbar = () => {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 1 }}
                 >
-                    <a href="#" className="pt-12 font-semibold text-2xl">
+                    <a href="#contact" className="pt-12 font-semibold text-2xl">
                         <span className="flex items-center px-2 rounded hover:bg-gray-300">
                             <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
                                 <MessageOutlined />
