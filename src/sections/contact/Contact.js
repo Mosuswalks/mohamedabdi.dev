@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 
 const Contact = () => {
     return (
-        <section className="bg-gray-100">
+        <section className="bg-gray-100" id="contact">
             <div className="w-4/5 m-auto md:w-1/2 ">
                 <div className="leading-snug">
                     <div className="pt-6 ml-6 text-4xl font-semibold text-gray-800 lg:text-5xl">
@@ -28,7 +28,12 @@ const Contact = () => {
                     </div>
                 </div>
                 <div>
-                    <form className="pt-8 pb-12 lg:m-3">
+                    <form
+                        className="pt-12 pb-12 lg:m-3"
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                    >
                         <div className="flex flex-wrap px-6 ">
                             <div className="">
                                 <label
@@ -44,6 +49,7 @@ const Contact = () => {
                                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                 id="inline-full-name"
                                 type="text"
+                                name="fullname"
                                 placeholder="Jane Doe"
                             />
                         </div>
@@ -63,6 +69,7 @@ const Contact = () => {
                                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                 id="inline-email"
                                 type="email"
+                                name="email"
                                 placeholder="jane@example.com"
                             />
                         </div>
@@ -82,10 +89,10 @@ const Contact = () => {
                                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
                                 id="inline-message"
                                 type="textarea"
-                                placeholder=""
+                                name="message"
                             />
                         </div>
-                        <div className="px-6 py-3">
+                        <div className="px-6 pt-3">
                             <motion.button
                                 className="px-3 bg-blue-500 border font-bold text-gray-100 rounded shadow py-2 px-4 mt-4"
                                 type="submit"

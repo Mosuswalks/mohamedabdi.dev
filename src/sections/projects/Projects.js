@@ -9,12 +9,12 @@ import { projects } from "../../constants"
 
 const Projects = () => {
     return (
-        <section className="bg-gray-200 pb-12" id="projects">
+        <section className="bg-gray-200 pb-12 border shadow-2xl" id="projects">
             <div className="w-4/5 m-auto pt-12">
                 <div>
                     <h2 className="text-2xl">Projects</h2>
                 </div>
-                <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {Object.values(projects).map(project => (
                         <div className="bg-white rounded-lg shadow overflow-hidden border">
                             <div className="">
@@ -49,8 +49,8 @@ const Projects = () => {
                                 <div className="my-4 leading-snug">
                                     <p>{project.description}</p>
                                 </div>
-                                <div className="flex my-3 text-lg text-gray-700 ">
-                                    <div className="hover:text-blue-600">
+                                <div className="flex my-3 text-lg text-gray-700 mt-auto">
+                                    <div className="hover:text-blue-600 self-end">
                                         <motion.button
                                             onClick={() =>
                                                 window.open(
