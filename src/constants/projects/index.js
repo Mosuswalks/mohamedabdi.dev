@@ -25,7 +25,7 @@ const JSin30 = {
     tech_stack: ["React", "Ant Design"],
     img: "JS30",
     github: "https://github.com/mosuswalks/30wordsofJS",
-    liveSite: true,
+    liveSite: false,
     siteLink: "https://github.com/mosuswalks",
 }
 

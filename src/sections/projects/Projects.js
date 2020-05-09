@@ -9,10 +9,12 @@ import { projects } from "../../constants"
 
 const Projects = () => {
     return (
-        <section className="bg-gray-200 pb-12 border shadow-2xl" id="projects">
+        <section className="bg-gray-200 pb-12" id="projects">
             <div className="w-4/5 m-auto pt-12">
                 <div>
-                    <h2 className="text-2xl">Projects</h2>
+                    <h2 className="text-3xl font-mono font-bold pb-3 text-gray-800">
+                        Projects
+                    </h2>
                 </div>
                 <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {Object.values(projects).map(project => (
@@ -49,33 +51,56 @@ const Projects = () => {
                                 <div className="my-4 leading-snug">
                                     <p>{project.description}</p>
                                 </div>
+
+                                {/* Project Links */}
                                 <div className="flex my-3 text-lg text-gray-700 mt-auto">
-                                    <div className="hover:text-blue-600 self-end">
+                                    {/* GitHub */}
+                                    <div className="hover:text-blue-600 flex items-center">
                                         <motion.button
+                                            className="rounded"
                                             onClick={() =>
                                                 window.open(
                                                     project.github,
                                                     "__blank"
                                                 )
                                             }
-                                            whileHover={{ scale: 1.3 }}
+                                            whileHover={{
+                                                color: "#3182CE",
+                                                backgroundColor: "#BEE3F8",
+                                            }}
                                         >
-                                            <GithubOutlined type="button" />
+                                            <div className="m-2 flex items-center">
+                                                <GithubOutlined type="button" />
+                                                <span className="text-xs px-1 tracking-widest uppercase font-semibold ">
+                                                    Github
+                                                </span>
+                                            </div>
                                         </motion.button>
                                     </div>
-                                    <div className="ml-4 hover:text-blue-600">
+
+                                    {/* Live Site */}
+                                    <div className="ml-1 hover:text-blue-600">
                                         {project.siteLink ? (
                                             <motion.button
+                                                className="rounded "
                                                 onClick={() =>
                                                     window.open(
                                                         project.siteLink,
                                                         "__blank"
                                                     )
                                                 }
-                                                whileHover={{ scale: 1.3 }}
+                                                whileHover={{
+                                                    color: "#3182CE",
+                                                    backgroundColor: "#BEE3F8",
+                                                }}
                                                 whileClick={{ scale: 0.9 }}
                                             >
-                                                <DesktopOutlined />
+                                                <div className="m-2 flex items-center">
+                                                    <DesktopOutlined type="button" />
+                                                    <span className=" text-xs px-1 tracking-widest uppercase font-semibold ">
+                                                        Live Site
+                                                    </span>
+                                                </div>
                                             </motion.button>
                                         ) : null}
                                     </div>
