@@ -96,7 +96,7 @@ const Projects = () => {
                                                 whileClick={{ scale: 0.9 }}
                                             >
                                                 <div className="m-2 flex items-center">
-                                                    <DesktopOutlined />
+                                                    <DesktopOutlined type="button" />
                                                     <span className=" text-xs px-1 tracking-widest uppercase font-semibold ">
                                                         Live Site
                                                     </span>

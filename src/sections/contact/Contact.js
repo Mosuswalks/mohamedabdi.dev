@@ -39,7 +39,7 @@ const Contact = () => {
         <section className="bg-gray-100 " id="contact">
             <div className="w-4/5 m-auto md:w-1/2 ">
                 <div className="leading-snug">
-                    <div className="pt-6 ml-6 text-4xl font-semibold text-gray-800 lg:text-5xl">
+                    <div className="pt-6 ml-6 text-3xl font-mono font-semibold text-gray-800 lg:text-5xl">
                         <h3>Get in Touch!</h3>
                     </div>
                     <div className="px-6 ml-2 text-2xl text-gray-700">
@@ -131,7 +131,9 @@ const Contact = () => {
                             <motion.button
                                 className="px-3 bg-blue-500 border font-bold text-gray-100 rounded shadow py-2 px-4 mt-4"
                                 type="submit"
-                                whileHover={{ scale: 1.02 }}
+                                whileHover={{
+                                    scale: 1.02,
+                                }}
                                 whileTap={{ scale: 1.01 }}
                             >
                                 <span className="flex items-center ">

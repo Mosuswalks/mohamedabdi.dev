@@ -2,14 +2,13 @@ import React from "react"
 import { motion } from "framer-motion"
 
 import WavingHand from "../../images/hand_wave.svg"
-import Avatar from "../../images/avatar.svg"
 
 const Hero = () => {
     return (
-        <section className="bg-gray-100 py-32 min-h-screen">
-            <div className="w-4/5 m-auto  lg:py-20 ">
+        <section className="bg-gray-100 min-h-screen">
+            <div className="w-4/5 m-auto  relative lg:py-20 ">
                 <motion.div
-                    className="flex justify-center"
+                    className="flex justify-center py-12"
                     //Animate to
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
