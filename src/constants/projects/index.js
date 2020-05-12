@@ -1,6 +1,6 @@
 const snkrBot = {
     name: "SNKRS Canada Bot",
-    description: `A fully automated sneaker bot for purchasing exclusive sneakers on the Nike Canada SNKR's site.`,
+    description: `A fully automated sneaker bot for purchasing exclusive sneakers on the Nike Canada SNKR's site. The script utlizes Puppeteer to mimic a user completing a transaction.`,
     tech_stack: ["Puppeteer", "Node Cron"],
     img: "snkrs",
     github: "https://github.com/mosuswalks/snkrs-bot",
@@ -21,12 +21,12 @@ const covidWatch = {
 
 const JSin30 = {
     name: "JS in 30",
-    description: `This project was built to solidify my understanding of Javascript fundamentals and advanced topics.`,
+    description: `A byte sized way to digest and comprehend the fundamental and advanced topics of Javascript. Each topic is explained within 30 words or less.`,
     tech_stack: ["React", "Ant Design"],
     img: "JS30",
     github: "https://github.com/mosuswalks/30wordsofJS",
     liveSite: false,
-    siteLink: "https://github.com/mosuswalks",
+    siteLink: null,
 }
 
 export default { JSin30, covidWatch, snkrBot }

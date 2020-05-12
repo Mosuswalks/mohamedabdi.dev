@@ -28,7 +28,7 @@ const Projects = () => {
                                     <Js />
                                 ) : null}
                             </div>
-                            <div className="m-8">
+                            <div className=" m-8">
                                 <div>
                                     <h4 className="font-semibold text-xl">
                                         {project.name}
@@ -53,9 +53,10 @@ const Projects = () => {
                                 </div>
 
                                 {/* Project Links */}
-                                <div className="flex my-3 text-lg text-gray-700 mt-auto">
+
+                                <div className="flex text-gray-600">
                                     {/* GitHub */}
-                                    <div className="hover:text-blue-600 flex items-center">
+                                    <div className="hover:text-blue-600 ">
                                         <motion.button
                                             className="rounded"
                                             onClick={() =>
