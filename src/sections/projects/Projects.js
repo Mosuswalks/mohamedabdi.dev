@@ -16,19 +16,19 @@ const Projects = () => {
                         Projects
                     </h2>
                 </div>
-                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-16">
                     {Object.values(projects).map(project => (
                         <div className="bg-white rounded-lg shadow overflow-hidden border">
-                            <div className="">
+                            <div className="m-8">
                                 {project.img === "virus" ? (
-                                    <Virus />
+                                    <Virus className="h-64 m-auto" />
                                 ) : project.img === "snkrs" ? (
-                                    <Snkrs />
+                                    <Snkrs className="h-64 m-auto" />
                                 ) : project.img === "JS30" ? (
-                                    <Js />
+                                    <Js className="h-64 m-auto" />
                                 ) : null}
                             </div>
-                            <div className=" m-8">
+                            <div className="m-8">
                                 <div>
                                     <h4 className="font-semibold text-xl">
                                         {project.name}

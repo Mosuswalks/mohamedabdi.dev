@@ -37,18 +37,38 @@ const Contact = () => {
 
     return (
         <section className="bg-gray-100 " id="contact">
-            <div className="w-4/5 m-auto md:w-1/2 ">
+            <div className="w-4/5 m-auto pt-12 md:w-1/2 ">
                 <div className="leading-snug">
-                    <div className="pt-6 ml-6 text-3xl font-mono font-semibold text-gray-800 lg:text-5xl">
+                    <div className="pt-16 ml-6 text-3xl font-mono font-semibold text-gray-800 lg:text-5xl">
                         <h3>Get in Touch!</h3>
                     </div>
                     <div className="px-6 ml-2 text-2xl text-gray-700">
-                        <span className="text-gray-800">
+                        <motion.button
+                            onClick={() =>
+                                window.open(
+                                    "https://github.com/mosuswalks",
+                                    "__blank"
+                                )
+                            }
+                            whileHover={{ color: "#718096" }}
+                            transition={{ ease: "easeOut" }}
+                            className="text-gray-800"
+                        >
                             <GithubOutlined />
-                        </span>
-                        <span className="text-blue-700 pl-3">
+                        </motion.button>
+                        <motion.button
+                            onClick={() =>
+                                window.open(
+                                    "https://linkedin.com/in/mohamedaabdi",
+                                    "__blank"
+                                )
+                            }
+                            whileHover={{ color: "#4299E1" }}
+                            transition={{ ease: "easeOut" }}
+                            className="text-blue-700 pl-3"
+                        >
                             <LinkedinOutlined />
-                        </span>
+                        </motion.button>
                         <span className="text-pink-600 pl-3">
                             <SlackOutlined />
                         </span>
@@ -56,7 +76,7 @@ const Contact = () => {
                 </div>
                 <div>
                     <form
-                        className="pt-12 pb-12 lg:m-3"
+                        className="py-12 lg:m-3"
                         name="contact"
                         method="POST"
                         data-netlify="true"
@@ -127,7 +147,7 @@ const Contact = () => {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="px-6 pt-3">
+                        <div className="px-6 py-3">
                             <motion.button
                                 className="px-3 bg-blue-500 border font-bold text-gray-100 rounded shadow py-2 px-4 mt-4"
                                 type="submit"

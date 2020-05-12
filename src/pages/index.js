@@ -7,10 +7,10 @@ import "./global.css"
 
 const IndexPage = () => {
     return (
-        <Layout className="container">
+        <Layout className="">
             <SEO title="Home" />
-            <Hero className="child" />
-            <About className="child" />
+            <Hero />
+            <About />
             <Projects />
             <Contact />
         </Layout>

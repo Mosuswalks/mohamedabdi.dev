@@ -11,7 +11,7 @@ const snkrBot = {
 const covidWatch = {
     name: "Covid Watch",
     description: `This project was buit to help visualise the impact of covid-19.  
-                The App fetches real time data from John Hopskins University through an API.`,
+                The App fetches real time data from John Hopskins University through an API and displays the results using ChartJS.`,
     tech_stack: ["Gatsby", "ChartJS"],
     img: "virus",
     github: "https://github.com/mosuswalks/covid-watch",
