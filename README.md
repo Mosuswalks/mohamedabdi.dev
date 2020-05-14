@@ -72,7 +72,8 @@ Feel free fork and edit this project to your liking.
 ### Built With
 
 * [Gatsby](https://Gatsbyjs.org/)
-* [Ant Design](https://ant.design)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Framer Motion](https://www.framer.com/motion/)
 
 
 ### Hosting
