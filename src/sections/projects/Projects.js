@@ -16,16 +16,16 @@ const Projects = () => {
                         Projects
                     </h2>
                 </div>
-                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-16">
                     {Object.values(projects).map(project => (
                         <div className="bg-white rounded-lg shadow overflow-hidden border">
-                            <div className="">
+                            <div className="m-8">
                                 {project.img === "virus" ? (
-                                    <Virus />
+                                    <Virus className="h-64 m-auto" />
                                 ) : project.img === "snkrs" ? (
-                                    <Snkrs />
+                                    <Snkrs className="h-64 m-auto" />
                                 ) : project.img === "JS30" ? (
-                                    <Js />
+                                    <Js className="h-64 m-auto" />
                                 ) : null}
                             </div>
                             <div className="m-8">
@@ -53,9 +53,10 @@ const Projects = () => {
                                 </div>
 
                                 {/* Project Links */}
-                                <div className="flex my-3 text-lg text-gray-700 mt-auto">
+
+                                <div className="flex text-gray-600">
                                     {/* GitHub */}
-                                    <div className="hover:text-blue-600 flex items-center">
+                                    <div className="hover:text-blue-600 ">
                                         <motion.button
                                             className="rounded"
                                             onClick={() =>
