@@ -37,8 +37,8 @@ const Contact = () => {
 
     return (
         <section className="bg-gray-100 " id="contact">
-            <div className="w-4/5 m-auto pt-12 md:w-1/2 ">
-                <div className="leading-snug">
+            <div className="w-4/5 m-auto py-12 md:w-1/2 ">
+                <div className="leading-snug ">
                     <div className="pt-16 ml-6 text-3xl font-mono font-semibold text-gray-800 lg:text-5xl">
                         <h3>Get in Touch!</h3>
                     </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                 </div>
                 <div>
                     <form
-                        className="py-12 lg:m-3"
+                        className="py-12 pl-3"
                         name="contact"
                         method="POST"
                         data-netlify="true"
