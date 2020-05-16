@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import { graphql, useStaticQuery } from "gatsby"
 import {
     MenuOutlined,
@@ -66,25 +67,10 @@ const Navbar = () => {
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 1 }}
                 >
-                    <a href="#projects" className="text-2xl">
-                        <span className="flex items-center px-2 rounded hover:bg-gray-300 mb-3">
-                            <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
-                                <CodeOutlined />
-                            </div>
-                            <span className="px-3 text-gray-800 font-semibold">
-                                Projects
-                                <span className="block text-xs text-gray-600 -mt-2">
-                                    What i've worked on
-                                </span>
-                            </span>
-                        </span>
-                    </a>
-                </motion.div>
-                <motion.div
-                    whileHover={{ scale: 1.04 }}
-                    whileTap={{ scale: 1 }}
-                >
-                    <a href="#about" className="font-semibold text-2xl">
+                    <AnchorLink
+                        href="#about"
+                        className="font-semibold text-2xl"
+                    >
                         <span className="flex items-center px-2 rounded hover:bg-gray-300 mb-3">
                             <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
                                 <UserOutlined />
@@ -97,13 +83,35 @@ const Navbar = () => {
                                 </span>
                             </span>
                         </span>
-                    </a>
+                    </AnchorLink>
                 </motion.div>
                 <motion.div
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 1 }}
                 >
-                    <a href="#contact" className="pt-12 font-semibold text-2xl">
+                    <AnchorLink href="#projects" className="text-2xl">
+                        <span className="flex items-center px-2 rounded hover:bg-gray-300 mb-3">
+                            <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
+                                <CodeOutlined />
+                            </div>
+                            <span className="px-3 text-gray-800 font-semibold">
+                                Projects
+                                <span className="block text-xs text-gray-600 -mt-2">
+                                    What i've worked on
+                                </span>
+                            </span>
+                        </span>
+                    </AnchorLink>
+                </motion.div>
+
+                <motion.div
+                    whileHover={{ scale: 1.04 }}
+                    whileTap={{ scale: 1 }}
+                >
+                    <AnchorLink
+                        href="#contact"
+                        className="pt-12 font-semibold text-2xl"
+                    >
                         <span className="flex items-center px-2 rounded hover:bg-gray-300">
                             <div className="h-12 w-12 text-center border shadow bg-white text-blue-600 rounded-full m-2">
                                 <MessageOutlined />
@@ -115,7 +123,7 @@ const Navbar = () => {
                                 </span>
                             </span>
                         </span>
-                    </a>
+                    </AnchorLink>
                 </motion.div>
             </motion.div>
         </header>
