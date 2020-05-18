@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import {
     SendOutlined,
     GithubOutlined,
-    SlackOutlined,
     LinkedinOutlined,
+    MailOutlined,
 } from "@ant-design/icons"
 import { motion } from "framer-motion"
 
@@ -69,9 +69,19 @@ const Contact = () => {
                         >
                             <LinkedinOutlined />
                         </motion.button>
-                        <span className="text-pink-600 pl-3">
-                            <SlackOutlined />
-                        </span>
+                        <motion.button
+                            onClick={() =>
+                                window.open(
+                                    "mailto:mohamedaabdi@yahoo.ca",
+                                    "__blank"
+                                )
+                            }
+                            whileHover={{ color: "#718096" }}
+                            transition={{ ease: "easeOut" }}
+                            className="text-gray-800 pl-3"
+                        >
+                            <MailOutlined />
+                        </motion.button>
                     </div>
                 </div>
                 <div>
