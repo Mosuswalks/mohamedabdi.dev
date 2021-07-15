@@ -1,8 +1,0 @@
-.container {
-    width: 100vw;
-    scroll-snap-type: y mandatory;
-}
-
-.section {
-    scroll-snap-align: start;
-}
